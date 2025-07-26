@@ -1,18 +1,19 @@
 # Authors
 
-Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
+Siya Qi:
+  name        : "Siya Qi"
+  uri         : "https://siyaqi.github.io"
+  email       : "siya.qi@kcl.ac.uk"
+  bio         : "PhD student in Computer Science at King's College London"
+  avatar      : "profile.png"
+  twitter     : "siyaqi"
+  google_plus : "siyaqi"
 
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+# 如果需要多个作者，可以添加更多
+# Name2 Name2:
+#   name        : "Name2 Name2"
+#   email       : "name2@name2.com"
+#   bio         : "I ordered what?"
+#   avatar      : "bio-photo.jpg"
+#   twitter     : "name2"
+#   google_plus : "Name"
