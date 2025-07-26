@@ -34,6 +34,10 @@ My research focuses on Natural Language Processing, particularly in the followin
 - **Intern**, Vivo - AI Research, 2023
 - **Intern**, Microsoft - Bing - SWE, 2022
 
+## Fun Facts
+I love to 
+
+
 ## Contact
 
 Feel free to reach out to me at siya.qi@kcl.ac.uk or connect with me on LinkedIn.

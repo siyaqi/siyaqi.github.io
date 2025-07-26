@@ -1,14 +1,16 @@
 ---
 layout: archive
-title: "Useful Projects"
+title: "Open Source Projects"
 permalink: /projects/
 author_profile: true
+redirect_from: 
+  - "/projects/"
+  - "/projects.html"
 ---
 
 
-Here are some of the projects I've worked on:
+Here are some of the projects that may be useful to you:
 
-## Open Source Projects
 
 ### [Awesome-Hallu-Eval](https://github.com/siyaqi/Awesome-Hallu-Eval)
 **A Comprehensive Collection of Hallucination Evaluation Methods**

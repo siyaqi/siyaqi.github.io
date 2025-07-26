@@ -1,0 +1,33 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications-simple/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
+
+{% include base_path %}
+
+<!-- Simple publications rendering for performance testing -->
+{% for post in site.publications reversed %}
+  <div class="list__item">
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <h2 class="archive__item-title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+      </h2>
+      
+      <p>Published in <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }} </p>
+
+      {% if post.excerpt %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt }}</p>
+      {% endif %}
+      
+      {% if post.paperurl %}
+        <p><a href="{{ post.paperurl }}">Download Paper</a></p>
+      {% endif %}
+    </article>
+  </div>
+{% endfor %} 
