@@ -35,8 +35,7 @@ My research focuses on Natural Language Processing, particularly in the followin
 - **Intern**, Microsoft - Bing - SWE, 2022
 
 ## Fun Facts
-I love to 
-
+I love to create and maintain bullet journals (手帐). It's a creative outlet that helps me organize my thoughts and plans while expressing my artistic side through decorative elements and layouts.
 
 ## Contact
 
