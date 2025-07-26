@@ -3,9 +3,9 @@ layout: archive
 title: "Open Source Projects"
 permalink: /projects/
 author_profile: true
-redirect_from: 
-  - "/projects/"
-  - "/projects.html"
+# redirect_from: 
+#   - "/projects/"
+#   - "/projects.html"
 ---
 
 
