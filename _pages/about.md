@@ -69,7 +69,7 @@ I love to create and maintain bullet journals (手帐). It's a creative outlet t
 
 ## Contact
 
-Feel free to reach out to me at siya.qi@kcl.ac.uk or connect with me on LinkedIn.
+Feel free to reach out to me at siya.qi@kcl.ac.uk or connect with me on [LinkedIn](https://www.linkedin.com/in/siya-qi-0034a3148).
 
 ---
 
