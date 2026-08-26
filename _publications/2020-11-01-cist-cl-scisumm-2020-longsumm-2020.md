@@ -5,8 +5,9 @@ category: conferences
 permalink: /publication/2020-11-01-cist-cl-scisumm-2020-longsumm-2020
 excerpt: 'Automatic scientific document summarization for CL-SciSumm 2020 and LongSumm 2020 shared tasks.'
 date: 2020-11-01
-venue: 'Proceedings of the First Workshop on Scholarly Document Processing'
+venue: 'SDP Workshop @ EMNLP 2020'
 paperurl: 'https://aclanthology.org/2020.sdp-1.25/'
+authors: 'L Li, Y Xie, W Liu, Y Liu, Y Jiang, S Qi, X Li'
 citation: 'L Li, Y Xie, W Liu, Y Liu, Y Jiang, S Qi, X Li. (2020). &quot;CIST@CL-SciSumm 2020, LongSumm 2020: Automatic scientific document summarization.&quot; <i>Proceedings of the First Workshop on Scholarly Document Processing</i>. 225-234.'
 ---
 

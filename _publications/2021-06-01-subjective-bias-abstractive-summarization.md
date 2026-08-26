@@ -7,6 +7,7 @@ excerpt: 'Investigating subjective bias in abstractive summarization and its imp
 date: 2021-06-01
 venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/abs/2106.10084'
+authors: 'L Li, W Liu, M Litvak, N Vanetik, J Pei, Y Liu, S Qi'
 citation: 'L Li, W Liu, M Litvak, N Vanetik, J Pei, Y Liu, S Qi. (2021). &quot;Subjective bias in abstractive summarization.&quot; <i>arXiv preprint arXiv:2106.10084</i>.'
 ---
 

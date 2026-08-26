@@ -5,8 +5,9 @@ category: conferences
 permalink: /publication/2022-11-01-sapgraph-structure-aware-extractive-summarization
 excerpt: 'Structure-aware extractive summarization for scientific papers using heterogeneous graph neural networks.'
 date: 2022-11-01
-venue: 'Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics'
+venue: 'AACL-IJCNLP 2022'
 paperurl: 'https://aclanthology.org/2022.aacl-main.6/'
+authors: 'S Qi, L Li, Y Li, J Jiang, D Hu, Y Li, Y Zhu, Y Zhou, M Litvak, N Vanetik'
 citation: 'S Qi, L Li, Y Li, J Jiang, D Hu, Y Li, Y Zhu, Y Zhou, M Litvak, N Vanetik. (2022). &quot;SAPGraph: Structure-aware extractive summarization for scientific papers with heterogeneous graph.&quot; <i>Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics</i>.'
 ---
 

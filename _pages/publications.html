@@ -5,36 +5,80 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+.pub-intro { font-size: 0.85em; color: var(--global-text-color-light); margin: 0 0 1.2em 0; }
+.pub-intro a { color: var(--global-link-color); }
+.pub-year {
+  font-size: 1.05em; font-weight: 700; letter-spacing: 0.04em;
+  margin: 1.3em 0 0.5em 0; padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--global-border-color);
+  color: var(--global-text-color);
+}
+.pub-year:first-of-type { margin-top: 0.4em; }
+.pub-list { list-style: none; margin: 0; padding: 0; counter-reset: pub; }
+.pub-item {
+  position: relative; display: flex; gap: 0.7em; align-items: baseline;
+  margin: 0 0 0.55em 0; padding: 0;
+  font-size: 0.86em; line-height: 1.45;
+  color: var(--global-text-color);
+}
+.pub-item::before {
+  counter-increment: pub; content: "[" counter(pub) "]";
+  flex: none; min-width: 2em; text-align: right;
+  color: var(--global-text-color-light); font-variant-numeric: tabular-nums;
+}
+.pub-body { flex: 1; min-width: 0; }
+.pub-title { font-weight: 600; }
+.pub-title a { color: var(--global-text-color); text-decoration: none; }
+.pub-title a:hover { color: var(--global-link-color); text-decoration: underline; }
+.pub-authors { color: var(--global-text-color); }
+.pub-authors b { font-weight: 700; color: #2f7f93; }
+html[data-theme="dark"] .pub-authors b { color: #52adc8; }
+.pub-venue { font-style: italic; color: var(--global-text-color-light); }
+.pub-links { display: inline-block; margin-left: 0.2em; white-space: nowrap; }
+.pub-links a {
+  display: inline-block; font-size: 0.78em; font-style: normal; font-weight: 600;
+  padding: 0 0.45em; margin-left: 0.25em; line-height: 1.5;
+  border: 1px solid #52adc8; border-radius: 3px;
+  color: #2f7f93; text-decoration: none; letter-spacing: 0.02em;
+}
+.pub-links a:hover { background: #52adc8; color: #fff; }
+html[data-theme="dark"] .pub-links a { color: #52adc8; }
+html[data-theme="dark"] .pub-links a:hover { color: #fff; }
+.pub-note { font-size: 0.8em; color: var(--global-text-color-light); margin-top: 1.5em; }
+</style>
+
+<p class="pub-intro">
+  {% if site.author.googlescholar %}Full list on <a href="{{ site.author.googlescholar }}">Google Scholar</a>. {% endif %}
+  <b style="color:#2f7f93">Bold</b> marks me; entries are sorted by year, most recent first.
+</p>
 
 {% include base_path %}
 
-<!-- Publications rendering -->
-{% for post in site.publications reversed %}
-  <div class="list__item">
-    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      <h2 class="archive__item-title" itemprop="headline">
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
-      </h2>
-      
-      <p>Published in <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }} </p>
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% assign current_year = "" %}
 
-      {% if post.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt }}</p>
-      {% endif %}
-      
-      {% if post.citation %}
-        <p>Recommended citation: {{ post.citation }}</p>
-      {% endif %}
-      
-      {% if post.paperurl %}
-        <p><a href="{{ post.paperurl }}">Download Paper</a></p>
-      {% endif %}
-    </article>
-  </div>
+{% for post in pubs %}
+  {% assign year = post.date | date: "%Y" %}
+  {% if year != current_year %}
+    {% unless forloop.first %}</ol>{% endunless %}
+    <div class="pub-year">{{ year }}</div>
+    <ol class="pub-list">
+    {% assign current_year = year %}
+  {% endif %}
+
+  <li class="pub-item">
+    <div class="pub-body">
+      <span class="pub-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></span><br>
+      <span class="pub-authors">{{ post.authors | replace: "S Qi", "<b>S Qi</b>" }}.</span>
+      <span class="pub-venue">{{ post.venue }}, {{ year }}.</span>
+      <span class="pub-links">
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
+        {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+      </span>
+    </div>
+  </li>
 {% endfor %}
+</ol>
 
-
-
+<p class="pub-note">Preprints are listed with their arXiv identifiers; peer-reviewed venues are shown in their published form.</p>

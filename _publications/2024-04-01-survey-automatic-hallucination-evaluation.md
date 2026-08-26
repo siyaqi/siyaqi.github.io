@@ -7,6 +7,8 @@ excerpt: 'Comprehensive survey of automatic hallucination evaluation methods in 
 date: 2024-04-01
 venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/abs/2404.12041'
+authors: 'S Qi, L Gui, Y He, Z Yuan'
+codeurl: 'https://github.com/siyaqi/Awesome-Hallu-Eval'
 citation: 'S Qi, L Gui, Y He, Z Yuan. (2024). &quot;A Survey of Automatic Hallucination Evaluation on Natural Language Generation.&quot; <i>arXiv preprint arXiv:2404.12041</i>.'
 ---
 
