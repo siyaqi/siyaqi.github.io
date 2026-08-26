@@ -40,7 +40,7 @@ Welcome to my profile!
 
 ## About Me
 
-I am Siya Qi (齐思雅). I received the bachelor degree in School of Computer Science of BUPT (2016-2020), and the master degree in School of Artificial Intelligence of BUPT (2020-2023). Now I am a Ph.D. student in King's College London (2023-Present), under the supervisor of [Dr. Lin Gui](https://www.kcl.ac.uk/people/lin-gui), [Dr. Zheng Yuan](https://www.cl.cam.ac.uk/~zy249/), and [Prof. Yulan He](https://www.kcl.ac.uk/people/yulan-he).
+I am Siya Qi (齐思雅). I received the bachelor degree in School of Computer Science of BUPT (2016-2020), and the master degree in School of Artificial Intelligence of BUPT (2020-2023). Now I am a Ph.D. student in King's College London (2023-Present), under the supervision of [Dr. Lin Gui](https://www.kcl.ac.uk/people/lin-gui), [Dr. Zheng Yuan](https://www.cl.cam.ac.uk/~zy249/), and [Prof. Yulan He](https://www.kcl.ac.uk/people/yulan-he).
 
 ## Research Interests
 
