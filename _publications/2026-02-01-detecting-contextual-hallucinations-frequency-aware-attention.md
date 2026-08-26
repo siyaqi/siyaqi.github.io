@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2026-02-01-detecting-contextual-hallucinations-frequency-aware-attention
 excerpt: 'A frequency-aware view of attention dynamics for lightweight contextual hallucination detection.'
-date: 2026-02-01
+date: 2026-08-01
 venue: 'ICML 2026'
 paperurl: 'https://arxiv.org/abs/2602.18145'
 authors: 'S Qi, Y Chen, R Zhao, Q Zhu, Z Hu, W Liu, Y He, Z Yuan, L Gui'

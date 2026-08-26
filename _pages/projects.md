@@ -17,6 +17,7 @@ author_profile: true
   border-left: 5px solid #52adc8;
   background: var(--global-code-background-color);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-size: 0.88em;
   line-height: 1.5;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
@@ -26,7 +27,7 @@ author_profile: true
 }
 .project-card h3 {
   margin: 0 0 0.25em 0;
-  font-size: 1.25em;
+  font-size: 1.2em;
   line-height: 1.3;
 }
 .project-card h3 a { text-decoration: none; }
