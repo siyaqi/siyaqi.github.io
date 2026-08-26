@@ -10,15 +10,15 @@ author_profile: true
 
 <style>
 .project-card {
-  margin: 0 0 1.5em 0;
-  padding: 1.1em 1.4em 1.2em;
+  margin: 0 0 1.1em 0;
+  padding: 0.9em 1.2em 1em;
   border-radius: 10px;
   border: 1px solid var(--global-border-color);
   border-left: 5px solid #52adc8;
   background: var(--global-code-background-color);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  font-size: 0.88em;
-  line-height: 1.5;
+  font-size: 0.82em;
+  line-height: 1.42;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 .project-card:hover {
@@ -26,27 +26,27 @@ author_profile: true
   transform: translateY(-2px);
 }
 .project-card h3 {
-  margin: 0 0 0.25em 0;
-  font-size: 1.2em;
+  margin: 0 0 0.15em 0;
+  font-size: 1.15em;
   line-height: 1.3;
 }
 .project-card h3 a { text-decoration: none; }
 .project-card h3 a:hover { text-decoration: underline; }
 .project-card .project-tagline {
-  margin: 0 0 0.7em 0;
+  margin: 0 0 0.5em 0;
   color: var(--global-text-color-light);
   font-style: italic;
   font-size: 0.95em;
 }
-.project-card p { margin: 0 0 0.6em 0; }
+.project-card p { margin: 0 0 0.45em 0; }
 .project-card p:last-child, .project-card ul:last-child { margin-bottom: 0; }
-.project-card p strong { display: inline-block; margin-top: 0.3em; }
+.project-card p strong { display: inline-block; margin-top: 0.15em; }
 .project-card ul {
-  margin: 0.15em 0 0.6em 1.4em;
+  margin: 0.1em 0 0.45em 1.3em;
   padding: 0;
 }
-.project-card li { margin: 0.1em 0; line-height: 1.45; }
-.project-card .project-links { margin-top: 0.8em; font-size: 0.9em; }
+.project-card li { margin: 0.05em 0; line-height: 1.4; }
+.project-card .project-links { margin-top: 0.6em; font-size: 0.9em; }
 .project-card .project-links a {
   display: inline-block;
   padding: 0.2em 0.7em;
@@ -63,6 +63,24 @@ html[data-theme="dark"] .project-card .project-links a:hover { color: #fff; }
 </style>
 
 Here are some of the projects that may be useful to you:
+
+<div class="project-card" markdown="1">
+
+### [CSee](https://github.com/cece00/CSee)
+<p class="project-tagline">A Terminal Monitor for Claude Code, Codex, and Copilot CLI Workflows</p>
+
+CSee is a lightweight terminal dashboard for keeping track of long-running coding-agent sessions. Instead of scrolling through endless output, it parses the agent's local logs and shows a one-sentence intent for each step of the workflow.
+
+**Key Features:**
+- **Live Dashboard**: `csee watch` shows active projects, current status, and full history in real time
+- **Focused Queries**: `csee now` / `csee errors` / `csee files` answer one question at a time
+- **Zero Intrusion, Zero Cost**: Reads only local logs, needs no configuration, makes no LLM calls, and works fully offline
+
+Install with `npm install -g csee-monitor`.
+
+<p class="project-links"><a href="https://github.com/cece00/CSee"><i class="fab fa-github"></i> GitHub</a> <a href="https://www.npmjs.com/package/csee-monitor"><i class="fab fa-npm"></i> npm</a></p>
+
+</div>
 
 <div class="project-card" markdown="1">
 
