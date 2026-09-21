@@ -44,7 +44,7 @@ I am Siya Qi (齐思雅). I received the bachelor degree in School of Computer S
 
 ## Research Interests
 
-My research focuses on Natural Language Processing and Large Language Models, particularly in the following areas:
+My research focuses on Natural Language Processing and Large Language Models, particularly in **LLM reliability** and **real-world applications**:
 
 <!-- - **Large Language Models**: Evaluation and analysis of LLMs, including reader-aligned retrieval-augmented generation and LLM simulation of human dialogue -->
 - **LLM Hallucination Evaluation and Mitigation**: Detecting, evaluating, and mitigating hallucination in LLMs, from mixed-context hallucination assessment to attention-based contextual hallucination detection
