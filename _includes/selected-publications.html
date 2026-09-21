@@ -1,0 +1,95 @@
+{% include base_path %}
+<style>
+.sel-filter { display: flex; flex-wrap: wrap; gap: 0.45em; margin: 0 0 1em 0; }
+.sel-pill {
+  padding: 0.2em 0.9em; font-size: 0.8em; line-height: 1.5;
+  border: 1px solid var(--global-border-color); border-radius: 999px;
+  background: transparent; color: var(--global-text-color); cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.sel-pill:hover { border-color: #52adc8; color: #2f7f93; }
+.sel-pill.is-active { background: #2f7f93; border-color: #2f7f93; color: #fff; }
+html[data-theme="dark"] .sel-pill:hover { color: #52adc8; }
+html[data-theme="dark"] .sel-pill.is-active { background: #52adc8; border-color: #52adc8; color: #fff; }
+.sel-list { list-style: none; margin: 0; padding: 0; }
+.sel-list .sel-item {
+  display: flex; gap: 0.9em; align-items: flex-start;
+  margin: 0 0 0.9em 0; padding: 0;
+  font-size: 0.86em; line-height: 1.45; color: var(--global-text-color);
+}
+.sel-item[hidden] { display: none; }
+.sel-badge {
+  flex: none; width: 4.6em; margin-top: 0.15em; padding: 0.15em 0;
+  border-radius: 4px; background: #2f7f93; color: #fff;
+  font-size: 0.85em; font-weight: 700; text-align: center; letter-spacing: 0.02em;
+}
+.sel-badge.v-ACL { background: #0b5394; }
+.sel-badge.v-EMNLP { background: #134f5c; }
+.sel-badge.v-ICML { background: #990000; }
+.sel-badge.v-ICLR { background: #38761d; }
+.sel-badge.v-AAAI { background: #7f6000; }
+.sel-badge.v-arXiv { background: #a64d79; }
+.sel-body { flex: 1; min-width: 0; }
+.sel-title { font-weight: 600; }
+.sel-title a { color: var(--global-text-color); text-decoration: none; }
+.sel-title a:hover { color: var(--global-link-color); text-decoration: underline; }
+.sel-authors b { font-weight: 700; color: #2f7f93; }
+html[data-theme="dark"] .sel-authors b { color: #52adc8; }
+.sel-venue { font-style: italic; color: var(--global-text-color-light); }
+.sel-links a {
+  display: inline-block; font-size: 0.78em; font-weight: 600;
+  padding: 0 0.45em; margin: 0.2em 0.25em 0 0; line-height: 1.5;
+  border: 1px solid #52adc8; border-radius: 3px;
+  color: #2f7f93; text-decoration: none; letter-spacing: 0.02em;
+}
+.sel-links a:hover { background: #52adc8; color: #fff; }
+html[data-theme="dark"] .sel-links a { color: #52adc8; }
+html[data-theme="dark"] .sel-links a:hover { color: #fff; }
+.sel-more { font-size: 0.85em; margin-top: 0.2em; }
+</style>
+<div class="sel-pubs">
+<div class="sel-filter" role="group" aria-label="Filter publications by research area">
+<button type="button" class="sel-pill is-active" data-area="all" aria-pressed="true">All</button>
+<button type="button" class="sel-pill" data-area="Hallucination" aria-pressed="false">Hallucination</button>
+<button type="button" class="sel-pill" data-area="Post-Training" aria-pressed="false">Post-Training</button>
+<button type="button" class="sel-pill" data-area="Agent" aria-pressed="false">Agent</button>
+<button type="button" class="sel-pill" data-area="Interpretability" aria-pressed="false">Interpretability</button>
+</div>
+<ol class="sel-list">
+{% assign pubs = site.publications | where: "selected", true | sort: "date" | reverse %}
+{% for post in pubs %}
+{% assign abbr = post.venue | remove: "Findings of " | split: " " | first %}
+<li class="sel-item" data-areas="{{ post.areas | join: '|' }}">
+<span class="sel-badge v-{{ abbr }}">{{ abbr }}</span>
+<div class="sel-body">
+<div class="sel-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></div>
+<div class="sel-authors">{{ post.authors | replace: "S Qi", "<b>S Qi</b>" }}</div>
+<div class="sel-venue">{{ post.venue }}</div>
+<div class="sel-links">{% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}{% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}</div>
+</div>
+</li>
+{% endfor %}
+</ol>
+<p class="sel-more"><a href="{{ base_path }}/publications/">Full publication list &rarr;</a></p>
+</div>
+<script>
+(function () {
+  var root = document.querySelector('.sel-pubs');
+  if (!root) return;
+  var pills = root.querySelectorAll('.sel-pill');
+  var items = root.querySelectorAll('.sel-item');
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      var area = pill.dataset.area;
+      items.forEach(function (li) {
+        li.hidden = area !== 'all' && li.dataset.areas.split('|').indexOf(area) === -1;
+      });
+      pills.forEach(function (p) {
+        var on = p === pill;
+        p.classList.toggle('is-active', on);
+        p.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    });
+  });
+})();
+</script>

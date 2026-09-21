@@ -6,6 +6,8 @@ permalink: /publication/2026-07-01-hime-personal-health-agent
 excerpt: 'A privacy-preserving, locally deployable LLM agent platform for real-time health insights from wearables.'
 date: 2026-07-01
 venue: 'EMNLP 2026 (System Demonstrations)'
+selected: true
+areas: ["Agent"]
 paperurl: 'https://arxiv.org/abs/2607.21019'
 authors: 'W Liu, S Qi, L Zhang, L Tudor Car, Y He'
 codeurl: 'https://github.com/thinkwee/HiMe'

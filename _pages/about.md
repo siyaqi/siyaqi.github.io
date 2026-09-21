@@ -46,11 +46,15 @@ I am Siya Qi (齐思雅). I received the bachelor degree in School of Computer S
 
 My research focuses on Natural Language Processing and Large Language Models, particularly in the following areas:
 
-- **Large Language Models**: Training and evaluation of LLMs, including verifier-free reinforcement learning and self-play / self-evolving pipelines
-- **Hallucination Evaluation and Mitigation**: Detecting, evaluating, and mitigating hallucination in LLMs, from mixed-context hallucination assessment to attention-based contextual hallucination detection
-- **Reasoning**: Improving and understanding LLM reasoning, including Theory-of-Mind reasoning and the side effects of reasoning-oriented training
-- **Alignment**: Understanding how reasoning interacts with safety, e.g. reasoning-induced misalignment
+<!-- - **Large Language Models**: Evaluation and analysis of LLMs, including reader-aligned retrieval-augmented generation and LLM simulation of human dialogue -->
+- **LLM Hallucination Evaluation and Mitigation**: Detecting, evaluating, and mitigating hallucination in LLMs, from mixed-context hallucination assessment to attention-based contextual hallucination detection
+- **Post-Training**: Reinforcement learning for incentive training beyond verifiable domains, self-play / self-evolving pipelines with learnable information gain, and the side effects of reasoning-oriented training
+- **Agent**: LLM agents in real-world settings, e.g. a privacy-preserving, self-hosted personal agent for real-time health insights from wearable devices, as well as Theory-of-Mind reasoning about others' beliefs
 - **Mechanistic Interpretability**: Analysing attention heads, neurons, and internal representations to explain and control model behaviour
+
+## Selected Publications
+
+{% include selected-publications.html %}
 
 ## Education
 

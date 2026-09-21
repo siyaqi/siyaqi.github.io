@@ -6,6 +6,8 @@ permalink: /publication/2025-09-01-when-thinking-backfires
 excerpt: 'Mechanistic analysis of how strengthening reasoning capabilities can induce misalignment in LLMs.'
 date: 2025-09-01
 venue: 'ICLR 2026'
+selected: true
+areas: ["Post-Training", "Interpretability"]
 paperurl: 'https://arxiv.org/abs/2509.00544'
 authors: 'H Yan, H Xu, S Qi, S Yang, Y He'
 codeurl: 'https://github.com/seacowx/When-Thinking-Backfires'

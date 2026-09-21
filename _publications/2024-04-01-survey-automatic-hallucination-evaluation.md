@@ -6,6 +6,8 @@ permalink: /publication/2024-04-01-survey-automatic-hallucination-evaluation
 excerpt: 'Comprehensive survey of automatic hallucination evaluation methods in natural language generation.'
 date: 2024-04-01
 venue: 'arXiv preprint'
+selected: true
+areas: ["Hallucination"]
 paperurl: 'https://arxiv.org/abs/2404.12041'
 authors: 'S Qi, L Gui, Y He, Z Yuan'
 codeurl: 'https://github.com/siyaqi/Awesome-Hallu-Eval'

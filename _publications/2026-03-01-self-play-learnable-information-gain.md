@@ -6,6 +6,8 @@ permalink: /publication/2026-03-01-self-play-learnable-information-gain
 excerpt: 'A position paper on why self-evolving LLM systems plateau and how to sustain self-improvement.'
 date: 2026-03-01
 venue: 'ICML 2026 (Position Paper Track)'
+selected: true
+areas: ["Post-Training"]
 paperurl: 'https://arxiv.org/abs/2603.02218'
 authors: 'W Liu, S Qi, Y Du, Y He'
 citation: 'W Liu, S Qi, Y Du, Y He. (2026). &quot;Position: Self-Play Only Evolves When Self-Synthetic Pipeline Ensures Learnable Information Gain.&quot; <i>Forty-third International Conference on Machine Learning (ICML 2026), Position Paper Track</i>.'

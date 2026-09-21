@@ -6,6 +6,8 @@ permalink: /publication/2025-03-01-evaluating-llms-assessment-mixed-context-hall
 excerpt: 'Evaluation of LLMs assessment capabilities for mixed-context hallucination in summarization tasks.'
 date: 2025-03-01
 venue: 'Findings of ACL 2025'
+selected: true
+areas: ["Hallucination"]
 paperurl: 'https://arxiv.org/abs/2503.01670'
 authors: 'S Qi, R Cao, Y He, Z Yuan'
 codeurl: 'https://github.com/siyaqi/FHSumBench'
