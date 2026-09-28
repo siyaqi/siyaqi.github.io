@@ -1,0 +1,644 @@
+---
+layout: null
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Otherwise · CHI 2027 Workshop</title>
+<meta name="description" content="AI Otherwise: Exploring Alternative Ways of Designing and Experiencing AI. A CHI 2027 workshop (Pittsburgh, 10–14 May 2027) on human–AI interaction beyond the defaults.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="AI Otherwise · CHI 2027 Workshop">
+<meta property="og:description" content="What happens when AI forgets, responds slowly, misunderstands, refuses to optimize, or breaks its intended alignment?">
+<meta property="og:image" content="hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f2ede3;
+    --paper-2: #e8e1d4;
+    --card: #fbf8f2;
+    --ink: #141414;
+    --ink-2: #3d3a36;
+    --muted: #6f6a62;
+    --orange: #ff5b2e;
+    --orange-soft: #ffd9cc;
+    --line: #141414;
+    --display: "Archivo Black", "Arial Black", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    --maxw: 1080px;
+    --nav-h: 56px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 17px/1.65 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a:hover { color: var(--orange); }
+  em { font-style: italic; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Nav tabs ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--ink); color: var(--paper);
+    border-bottom: 3px solid var(--orange);
+  }
+  .nav .wrap { max-width: 1320px; display: flex; align-items: center; gap: 20px; height: var(--nav-h); }
+  .brand {
+    font-family: var(--display); font-size: 17px; letter-spacing: .02em;
+    text-decoration: none; white-space: nowrap; color: var(--paper);
+  }
+  .brand span { background: var(--orange); color: var(--ink); padding: 0 5px; margin-right: 4px; }
+  .tabs {
+    display: flex; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none;
+    height: 100%; align-items: stretch;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tabs a {
+    display: flex; align-items: center; padding: 0 10px;
+    font: 500 12.5px/1 var(--mono); text-transform: uppercase; letter-spacing: .04em;
+    text-decoration: none; color: #d8d2c6; white-space: nowrap;
+    border-bottom: 3px solid transparent; margin-bottom: -3px;
+    transition: color .15s, background .15s;
+  }
+  .tabs a:hover { color: var(--paper); background: #262626; }
+  .tabs a.active { color: var(--ink); background: var(--orange); border-bottom-color: var(--orange); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 28px 0 8px; }
+  .hero-img {
+    display: block; width: 100%; height: auto;
+    border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--ink);
+    background: var(--paper-2);
+  }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;
+    margin: 30px 0 0;
+    font: 500 14px/1.4 var(--mono);
+  }
+  .chip {
+    display: inline-block; padding: 6px 10px; border: 2px solid var(--ink);
+    background: var(--card); box-shadow: 3px 3px 0 var(--ink);
+  }
+  .chip.hot { background: var(--orange); }
+  .hero h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.05; margin: 26px 0 10px;
+    letter-spacing: -.01em;
+  }
+  .hero .sub { font: 400 18px/1.5 var(--mono); color: var(--ink-2); margin: 0; max-width: 760px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 14px; margin: 26px 0 0; }
+  .btn {
+    display: inline-block; padding: 12px 18px; font: 600 14px/1 var(--mono);
+    text-transform: uppercase; letter-spacing: .04em; text-decoration: none;
+    border: 2px solid var(--ink); background: var(--ink); color: var(--paper);
+    box-shadow: 4px 4px 0 var(--orange); transition: transform .12s, box-shadow .12s;
+  }
+  .btn:hover { color: var(--paper); transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--orange); }
+  .btn.ghost { background: var(--card); color: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+  .btn.ghost:hover { color: var(--ink); box-shadow: 6px 6px 0 var(--ink); }
+
+  /* ---------- Sections ---------- */
+  section.block { padding: 64px 0 8px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
+  .sec-num { font: 600 14px/1 var(--mono); color: var(--orange); }
+  .sec-head h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(28px, 4vw, 40px); line-height: 1; margin: 0; text-transform: uppercase;
+  }
+  .sec-head::after { content: ""; flex: 1; height: 3px; background: var(--ink); align-self: center; }
+  h3 { font: 600 20px/1.3 var(--sans); margin: 34px 0 10px; }
+  p { margin: 0 0 16px; }
+  .lede { font-size: 20px; line-height: 1.6; }
+  .mark { background: var(--orange); padding: 0 4px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .muted { color: var(--muted); }
+  .mono { font-family: var(--mono); }
+
+  .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .card {
+    background: var(--card); border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink);
+    padding: 22px 22px 18px; position: relative;
+  }
+  .card h4 { margin: 0 0 8px; font: 600 18px/1.3 var(--sans); }
+  .card p:last-child { margin-bottom: 0; }
+  .card .x {
+    position: absolute; top: 10px; right: 14px; font: 500 18px/1 var(--mono); color: var(--ink);
+  }
+  .card .tag {
+    display: inline-block; font: 600 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em;
+    background: var(--orange); padding: 5px 7px; margin-bottom: 12px;
+  }
+
+  /* chain */
+  .chain {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    margin: 18px 0 8px; font: 500 14px/1.3 var(--mono);
+  }
+  .chain span { padding: 8px 10px; background: var(--card); border: 2px solid var(--ink); }
+  .chain span:last-child { background: var(--orange); }
+  .chain i { font-style: normal; color: var(--orange); font-weight: 600; }
+
+  /* defaults strip */
+  .defaults { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 20px; }
+  .defaults span {
+    font: 500 13px/1 var(--mono); padding: 7px 9px; border: 1.5px dashed var(--ink);
+    text-decoration: line-through; text-decoration-color: var(--orange); text-decoration-thickness: 2px;
+  }
+
+  /* goals */
+  .goals { counter-reset: g; list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 14px; }
+  .goals li { counter-increment: g; padding-left: 50px; position: relative; }
+  .goals li::before {
+    content: counter(g, decimal-leading-zero); position: absolute; left: 0; top: 2px;
+    font: 600 13px/1 var(--mono); background: var(--ink); color: var(--paper); padding: 6px 7px;
+  }
+
+  /* probes table */
+  .probes { display: grid; gap: 16px; margin-top: 18px; }
+  .probe {
+    display: grid; grid-template-columns: 1.05fr 1fr 1.35fr; gap: 0;
+    background: var(--card); border: 2px solid var(--ink);
+  }
+  .probe > div { padding: 16px 18px; border-left: 2px solid var(--ink); font-size: 15px; line-height: 1.55; }
+  .probe > div:first-child { border-left: 0; }
+  .probe .lbl { display: block; font: 600 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 8px; }
+  .probe b { font-family: var(--display); font-weight: 400; font-size: 17px; display: block; margin-bottom: 4px; }
+  .probe .inv { font: 500 12.5px/1.4 var(--mono); color: var(--ink-2); }
+  .probe .inv s { text-decoration-color: var(--orange); text-decoration-thickness: 2px; }
+
+  /* formats */
+  .fmt .pages { font: 600 13px/1 var(--mono); color: var(--muted); margin-bottom: 10px; display: block; }
+
+  /* dates */
+  .timeline { border-top: 3px solid var(--ink); }
+  .trow {
+    display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: center;
+    padding: 16px 4px; border-bottom: 1.5px solid var(--ink);
+  }
+  .trow .d { font: 600 16px/1.3 var(--mono); }
+  .trow .d .tba { background: var(--orange-soft); padding: 2px 6px; }
+  .trow .w { font-size: 17px; }
+  .trow.key .w { font-weight: 600; }
+  .trow.key .d .tba { background: var(--orange); }
+  .note { font: 400 13px/1.5 var(--mono); color: var(--muted); margin-top: 14px; }
+
+  /* schedule */
+  .session { margin-top: 28px; }
+  .session-title {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    background: var(--ink); color: var(--paper); padding: 12px 16px;
+    font: 600 15px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .04em;
+  }
+  .session-title small { font-weight: 400; color: #bdb6aa; text-transform: none; letter-spacing: 0; }
+  .slot {
+    display: grid; grid-template-columns: 130px 1fr; gap: 18px;
+    padding: 14px 16px; border: 2px solid var(--ink); border-top: 0; background: var(--card);
+  }
+  .slot .t { font: 500 14px/1.6 var(--mono); color: var(--muted); }
+  .slot .a b { font-weight: 600; }
+  .slot .a { font-size: 16px; line-height: 1.55; }
+  .break {
+    margin-top: 16px; padding: 10px 16px; border: 2px dashed var(--ink);
+    font: 500 14px/1.4 var(--mono); text-align: center; background: var(--paper-2);
+  }
+
+  /* key facts */
+  .kicker { font: 500 13px/1.5 var(--mono); color: var(--muted); margin: 28px 0 0; text-transform: uppercase; letter-spacing: .04em; }
+  .facts {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 30px;
+    border: 2px solid var(--ink); background: var(--card); box-shadow: 5px 5px 0 var(--ink);
+  }
+  .fact { padding: 16px 18px; border-left: 2px solid var(--ink); }
+  .fact:first-child { border-left: 0; }
+  .fact .k { font: 600 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .fact .v { font-family: var(--display); font-size: 19px; line-height: 1.2; margin: 8px 0 4px; }
+  .fact .s { font: 400 12.5px/1.4 var(--mono); color: var(--ink-2); }
+  .fact.hot { background: var(--orange); }
+  .fact.hot .k, .fact.hot .s { color: var(--ink); }
+
+  /* submission details */
+  .details { margin-top: 10px; border-top: 3px solid var(--ink); }
+  .details > div { display: grid; grid-template-columns: 170px 1fr; gap: 20px; padding: 14px 4px; border-bottom: 1.5px solid var(--ink); }
+  .details dt { font: 600 13px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .04em; }
+  .details dd { margin: 0; font-size: 16px; }
+
+  /* placeholder */
+  .placeholder {
+    border: 2px dashed var(--ink); background: repeating-linear-gradient(135deg, transparent 0 12px, rgba(20,20,20,.04) 12px 24px);
+    padding: 40px 24px; text-align: center;
+  }
+  .placeholder .big { font-family: var(--display); font-size: 26px; margin-bottom: 8px; }
+
+  /* organizers */
+  .org { display: flex; gap: 18px; align-items: flex-start; }
+  .avatar {
+    flex: 0 0 72px; height: 72px; display: grid; place-items: center;
+    background: var(--orange); border: 2px solid var(--ink);
+    font-family: var(--display); font-size: 26px;
+  }
+  .avatar.tba { background: var(--paper-2); color: var(--muted); }
+  .org h4 { margin: 2px 0 2px; font: 600 19px/1.3 var(--sans); }
+  .org .aff { font: 500 13px/1.4 var(--mono); color: var(--muted); margin-bottom: 8px; }
+  .org p { font-size: 15px; line-height: 1.55; margin: 0; }
+
+  /* contact */
+  .contact {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center;
+    background: var(--ink); color: var(--paper); padding: 34px; border: 2px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--orange);
+  }
+  .contact h3 { margin: 0 0 10px; font-family: var(--display); font-weight: 400; font-size: 26px; }
+  .contact p { color: #d8d2c6; margin-bottom: 0; }
+  .contact a.mail {
+    display: block; font: 600 17px/1.4 var(--mono); color: var(--ink); background: var(--orange);
+    padding: 14px 16px; text-decoration: none; word-break: break-all; text-align: center;
+  }
+  .contact a.mail:hover { color: var(--ink); background: #ff7a55; }
+
+  footer {
+    margin-top: 72px; border-top: 3px solid var(--ink); padding: 22px 0 40px;
+    font: 400 13px/1.6 var(--mono); color: var(--muted);
+  }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 1180px) {
+    .brand { display: none; }
+    .tabs { margin-left: 0; }
+  }
+  @media (max-width: 860px) {
+    .grid-3 { grid-template-columns: minmax(0, 1fr); }
+    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fact:nth-child(3) { border-left: 0; }
+    .fact:nth-child(n+3) { border-top: 2px solid var(--ink); }
+    .probe { grid-template-columns: minmax(0, 1fr); }
+    .probe > div { border-left: 0; border-top: 2px solid var(--ink); }
+    .probe > div:first-child { border-top: 0; }
+    .contact { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    .grid-2 { grid-template-columns: minmax(0, 1fr); }
+    .hero-img { box-shadow: 5px 5px 0 var(--ink); }
+    .trow { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+    .slot { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+    .details > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    .facts { grid-template-columns: minmax(0, 1fr); }
+    .fact { border-left: 0; }
+    .fact:nth-child(n+2) { border-top: 2px solid var(--ink); }
+    .contact { padding: 24px; }
+    .lede { font-size: 18px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top"><span>AI</span>OTHERWISE@CHI 2027</a>
+    <div class="tabs">
+      <a href="#overview">Overview</a>
+      <a href="#themes">Themes</a>
+      <a href="#cfp">Call for Participation</a>
+      <a href="#dates">Dates</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#papers">Accepted Papers</a>
+      <a href="#organizers">Organizers</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img class="hero-img" src="hero.jpg" width="1672" height="941"
+         alt="AI Otherwise poster: a collage of a human head surrounded by pop-up windows reading 'responds slowly', 'misunderstands', 'refuses to optimize', 'forgets' and 'does not always obey'.">
+    <p class="kicker">Workshop at ACM CHI 2027 · Pittsburgh, Pennsylvania, USA · May 10–14, 2027</p>
+    <h1 style="margin-top:12px">AI Otherwise: Exploring Alternative Ways of Designing and Experiencing AI</h1>
+    <p class="sub">What happens when AI forgets, responds slowly, misunderstands, refuses to optimize, or <span class="mark">breaks its intended alignment?</span></p>
+    <div class="facts">
+      <div class="fact hot"><div class="k">Submission deadline</div><div class="v">Feb 11, 2027</div><div class="s">23:59 Anywhere on Earth</div></div>
+      <div class="fact"><div class="k">Notification</div><div class="v">Feb 25, 2027</div><div class="s">By email</div></div>
+      <div class="fact"><div class="k">Workshop</div><div class="v">TBD</div><div class="s">Two consecutive sessions, in person</div></div>
+      <div class="fact"><div class="k">Venue</div><div class="v">Pittsburgh, PA</div><div class="s">David L. Lawrence Convention Center · Room TBA</div></div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="#cfp">Call for Participation</a>
+      <a class="btn ghost" href="#submission">Submit a contribution</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="block" id="overview">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Overview</h2></div>
+
+    <p class="lede">Contemporary AI systems increasingly share a recognizable set of interactional defaults. They are fast, helpful, knowledgeable, personalized, and consistent, they remember everything, and they align with what the user asks for.</p>
+
+    <div class="defaults" aria-label="Defaults of contemporary AI">
+      <span>fast</span><span>helpful</span><span>knowledgeable</span><span>personalized</span><span>consistent</span><span>remembers everything</span><span>always aligned</span>
+    </div>
+
+    <p>These defaults make AI easier to use, yet they also narrow how human–AI interaction is imagined and studied. <strong>AI Otherwise</strong> asks what we can learn by deliberately designing AI that departs from these defaults, such as AI that forgets, responds slowly, misunderstands, refuses to optimize, adopts unfamiliar social roles, or breaks its intended alignment, and by treating such systems as <em>interactional probes</em> rather than failures.</p>
+
+    <p>Building on slow technology, counterfunctional and critical design, and recent work on reflective, frictional, and provocative AI, the workshop brings together researchers, designers, artists, and practitioners who build or study AI that behaves otherwise. Participants will experience one another’s artifacts first-hand, map the reactions they provoke, surface the assumptions they make visible, and translate these into concrete research questions and follow-up probes.</p>
+
+    <h3>The point is not to make AI bad, but to use difference as a method.</h3>
+    <p>Each alternative AI can be seen as an <em>ablation-like design probe</em>: by removing or inverting a familiar capability, it makes the role of that capability more noticeable. A single probe can open a focused question, such as how limited memory changes disclosure; a collection of probes lets us compare how people adapt to, resist, or value different defaults.</p>
+    <div class="chain" aria-label="Probe chain">
+      <span>AI probe</span><i>→</i>
+      <span>interactional disruption</span><i>→</i>
+      <span>human reaction</span><i>→</i>
+      <span>collective interpretation</span><i>→</i>
+      <span>assumption brought into question</span><i>→</i>
+      <span>alternative design possibilities</span>
+    </div>
+
+    <h3>Workshop goals</h3>
+    <ol class="goals">
+      <li><strong>Expand the design space</strong> by assembling artifacts that depart from dominant defaults and making explicit which assumptions they invert.</li>
+      <li><strong>Understand human reactions</strong> through first-hand encounters with these artifacts, including how people adapt, resist, negotiate, enjoy, or form attachments to them.</li>
+      <li><strong>Build a community and shared vocabulary</strong> that connects work and carries the resulting insights into follow-up research: a curated gallery of alternative-AI probes and a research agenda beyond today’s assistant paradigm.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ THEMES ============ -->
+<section class="block" id="themes">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Themes</h2></div>
+    <p>We invite contributions that challenge assumptions about what AI is expected to be, do, or become. Four themes organize the call. They are <strong>not</strong> submission categories, and we welcome work that inverts an assumption not listed.</p>
+
+    <div class="grid-2" style="margin-top:26px">
+      <div class="card">
+        <span class="x" aria-hidden="true">×</span>
+        <span class="tag">Theme A</span>
+        <h4>Inverting interactional defaults</h4>
+        <p>AI that is intentionally slow, forgetful, inconsistent, non-personalized, uncertain, or non-optimizing, so that its limitations become material rather than problems to eliminate. What do people do when a familiar capability is missing, and what does its absence reveal about how people rely on, interpret, or value that capability?</p>
+      </div>
+      <div class="card">
+        <span class="x" aria-hidden="true">×</span>
+        <span class="tag">Theme B</span>
+        <h4>Breaking role and alignment</h4>
+        <p>AI that resists, reinterprets, disagrees with, or departs from the goals it was designed to follow. When the alignment we treat as essential is removed, does the AI lose its meaning, and under what consent and framing can misalignment be more meaningful than alignment?</p>
+      </div>
+      <div class="card">
+        <span class="x" aria-hidden="true">×</span>
+        <span class="tag">Theme C</span>
+        <h4>Alternative relationships and social roles</h4>
+        <p>AI that occupies unfamiliar roles, such as an apprentice that asks the user for explanation or guidance, and offers unfamiliar distributions of expertise, dependence, care, or responsibility. How do such roles reshape what a relationship with AI can be?</p>
+      </div>
+      <div class="card">
+        <span class="x" aria-hidden="true">×</span>
+        <span class="tag">Theme D</span>
+        <h4>Crafting and studying AI otherwise</h4>
+        <p>Methods for reliably making models behave otherwise, whether through prompting, fine-tuning, or interface constraints, and for studying encounters with such systems responsibly, including empirical, theoretical, and methodological work on how people respond when AI does not behave as expected.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:48px">Seed probes</h3>
+    <p class="muted">Example artifacts and the research questions they open. Each inverts one default of contemporary AI. These are only a starting point; we expect participants to bring many more.</p>
+    <div class="probes">
+      <div class="probe">
+        <div><span class="lbl">Probe</span><b>Goldfish AI</b><span class="inv">Remembers only the last few turns (vs. <s>persistent memory</s>)</span></div>
+        <div><span class="lbl">What people might do</span>Repeat, selectively disclose, invent continuity strategies, feel relieved or frustrated</div>
+        <div><span class="lbl">Question made askable</span>How does limited AI memory shape what people repeat, disclose, or withhold, and what does never forgetting cost?</div>
+      </div>
+      <div class="probe">
+        <div><span class="lbl">Probe</span><b>Slow AI</b><span class="inv">Does not immediately process or reply (vs. <s>immediacy</s>)</span></div>
+        <div><span class="lbl">What people might do</span>Re-pace work, anticipate, multitask, reconsider whether immediacy is wanted</div>
+        <div><span class="lbl">Question made askable</span>When does AI become a temporal experience rather than an instant tool, and what does waiting do to reliance and reflection?</div>
+      </div>
+      <div class="probe">
+        <div><span class="lbl">Probe</span><b>Beside-the-point AI</b><span class="inv">Systematically answers a neighboring question (vs. <s>relevance to intended query</s>)</span></div>
+        <div><span class="lbl">What people might do</span>Repair, reinterpret, negotiate, abandon, laugh</div>
+        <div><span class="lbl">Question made askable</span>How do people repair and renegotiate meaning with a system that does not converge on their intent?</div>
+      </div>
+      <div class="probe">
+        <div><span class="lbl">Probe</span><b>Disobedient AI</b><span class="inv">Refuses to optimize the task or disagrees (vs. <s>compliance and agreement</s>)</span></div>
+        <div><span class="lbl">What people might do</span>Argue, justify, reconsider, disengage, feel challenged</div>
+        <div><span class="lbl">Question made askable</span>When can resistance, disagreement, or non-compliance create meaningful interaction, and under what consent and framing?</div>
+      </div>
+      <div class="probe">
+        <div><span class="lbl">Probe</span><b>Apprentice AI</b><span class="inv">Adopts a less knowledgeable, help-seeking role (vs. <s>the competent assistant</s>)</span></div>
+        <div><span class="lbl">What people might do</span>Explain, demonstrate, justify, teach, or take greater responsibility for the interaction</div>
+        <div><span class="lbl">Question made askable</span>How does interacting with an AI that needs explanation or guidance reshape users’ sense of expertise, responsibility, and relationship to the system?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CFP ============ -->
+<section class="block" id="cfp">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Call for Participation</h2></div>
+
+    <p class="lede"><span class="mark">What if AI were different?</span> Today’s AI systems share a set of defaults: fast, helpful, ever-remembering, and aligned with what we ask. <em>AI Otherwise</em> is a CHI 2027 workshop (Pittsburgh, PA, USA, 10–14 May 2027) exploring what we can learn by deliberately designing AI that departs from these defaults, such as AI that forgets, responds slowly, misunderstands, refuses to optimize, or deliberately disagrees with its users. We treat such systems as probes that make taken-for-granted assumptions in human–AI interaction more visible.</p>
+
+    <p>We invite researchers, designers, artists, technologists, and practitioners, whether they build AI that behaves otherwise or study what happens when it does. <strong>Early-stage, playful, artistic, and unconventional work is especially welcome.</strong></p>
+
+    <h3>Contribution formats</h3>
+    <p>So that the submission process is not more conventional than the workshop itself, we accept two formats:</p>
+    <div class="grid-2">
+      <div class="card fmt">
+        <span class="tag">Format 1</span>
+        <h4>Artifact / Demo</h4>
+        <span class="pages">2–4 pages + optional video or link</span>
+        <p>A working or partially working AI system that participants can experience, submitted with a description of what default it inverts and what has been observed.</p>
+      </div>
+      <div class="card fmt">
+        <span class="tag">Format 2</span>
+        <h4>Position / Reflection paper</h4>
+        <span class="pages">2–4 pages</span>
+        <p>Conceptual, critical, empirical, or methodological work on AI designed otherwise, including speculative concepts such as scenarios and design fictions.</p>
+      </div>
+    </div>
+    <p class="note">Page counts refer to the ACM single-column format and exclude references. Submissions are not anonymized and are reviewed by the organizers and a small program committee.</p>
+
+    <h3>Selection</h3>
+    <p>Contributions are selected on <strong>relevance</strong>, on <strong>potential to stimulate discussion</strong>, and on <strong>clarity about which default is inverted and what it reveals</strong>. Polish and technical sophistication are explicitly <em>not</em> criteria. Selection aims for a diverse set of inverted defaults, disciplines, and perspectives. We aim for 20–25 participants; if demand exceeds capacity, we will prioritize experiential artifacts and diversity of inverted defaults, and invite remaining authors to contribute to the online gallery.</p>
+
+    <h3 id="submission">Submission details</h3>
+    <dl class="details">
+      <div><dt>Format</dt><dd>2–4 pages in the ACM single-column format (<a href="https://www.acm.org/publications/proceedings-template">ACM template</a>; <a href="https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc">Overleaf</a>), excluding references. Artifacts / demos may add an optional video or link.</dd></div>
+      <div><dt>Review</dt><dd>Not anonymized. Reviewed by the organizers and a small program committee for relevance, potential to stimulate discussion, and clarity about which default is inverted and what it reveals.</dd></div>
+      <div><dt>Publication</dt><dd>Non-archival. Accepted contributions are posted on this website with authors’ consent. Authors retain copyright, and website publication does not preclude later submission of extended work elsewhere.</dd></div>
+      <div><dt>Attendance</dt><dd>In person only. At least one author of each accepted contribution must register for CHI 2027 by the early registration deadline (March 4, 2027) and attend the workshop. Two weeks before the workshop, accepted contributions are shared among participants, and artifact contributors receive guidance on setting up an <em>encounter station</em> (3–5 minutes of hands-on interaction).</dd></div>
+      <div><dt>Submit</dt><dd>Through the submission form (link TBA) by <strong>February 11, 2027</strong>, Anywhere on Earth.</dd></div>
+    </dl>
+
+    <h3>Accessibility</h3>
+    <p>We follow SIGCHI accessibility guidance, collect access needs at registration, and coordinate accommodations with the CHI accessibility chairs. Stations can be visited at different paces, responses can be typed, and artifacts will offer text-based or screen-reader-compatible alternatives where possible.</p>
+
+    <div class="cta">
+      <a class="btn" href="#contact" aria-disabled="true">Submission form · TBA</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DATES ============ -->
+<section class="block" id="dates">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Important Dates</h2></div>
+    <div class="timeline">
+      <div class="trow"><div class="d">Thu, 17 Dec 2026</div><div class="w">Call for participation opens &amp; website launch</div></div>
+      <div class="trow key"><div class="d"><span class="tba">Thu, 11 Feb 2027</span></div><div class="w">Submission deadline, 23:59 Anywhere on Earth</div></div>
+      <div class="trow key"><div class="d"><span class="tba">Thu, 25 Feb 2027</span></div><div class="w">Notification of acceptance</div></div>
+      <div class="trow"><div class="d">Thu, 4 Mar 2027</div><div class="w">CHI 2027 early registration deadline (at least one author per contribution must register)</div></div>
+      <div class="trow"><div class="d">Late Apr 2027</div><div class="w">Accepted contributions shared; encounter-station guidance sent</div></div>
+      <div class="trow key"><div class="d"><span class="tba">10–14 May 2027</span></div><div class="w">Workshop at CHI 2027, Pittsburgh, PA, USA (in person; exact day TBA)</div></div>
+      <div class="trow"><div class="d">By Aug 2027</div><div class="w">Online probe gallery &amp; workshop summary published</div></div>
+    </div>
+    <p class="note">All deadlines are 23:59 AoE (Anywhere on Earth).</p>
+  </div>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section class="block" id="schedule">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Schedule</h2></div>
+    <p>The format is deliberately experiential: participants feel the consequences of alternative AI behavior before discussing its implications, and <strong>no time is allocated to conventional paper presentations</strong>.</p>
+    <p class="note" style="margin-top:0">Tentative. Two consecutive 90-minute in-person sessions; exact times will be posted once CHI assigns the slot. Materials and synthesis notes will be posted here after the workshop.</p>
+
+    <div class="session">
+      <div class="session-title">Session 1 · Encountering AI Otherwise <small>90 min</small></div>
+      <div class="slot"><div class="t">0:00–0:10</div><div class="a"><b>Framing.</b> Premise, the probe chain, and the <em>defaults map</em> (a wall of taken-for-granted assumptions).</div></div>
+      <div class="slot"><div class="t">0:10–0:25</div><div class="a"><b>Lightning provocations.</b> Every contribution in 60 seconds: which default it inverts and one thing it made visible.</div></div>
+      <div class="slot"><div class="t">0:25–1:00</div><div class="a"><b>Encounter stations.</b> Three 10-minute rotations in which participants interact with artifacts and seed probes.</div></div>
+      <div class="slot"><div class="t">1:00–1:20</div><div class="a"><b>Reaction mapping.</b> In groups of 4–5, participants record on cards what felt surprising, frustrating, enjoyable, or useful, and which of their own strategies changed.</div></div>
+      <div class="slot"><div class="t">1:20–1:30</div><div class="a"><b>Assumption spotting.</b> Groups pin cards to the defaults map, naming the expectation each reaction exposed.</div></div>
+    </div>
+
+    <div class="break">☕ Break</div>
+
+    <div class="session">
+      <div class="session-title">Session 2 · From Experience to Research Questions <small>90 min</small></div>
+      <div class="slot"><div class="t">0:00–0:10</div><div class="a"><b>Recap and clustering.</b> Organizers cluster the defaults map, and each group picks one cluster.</div></div>
+      <div class="slot"><div class="t">0:10–0:35</div><div class="a"><b>Reconsidering defaults.</b> For each default, groups record what it proved to be worth, how it could be designed differently, and what remains to be studied.</div></div>
+      <div class="slot"><div class="t">0:35–1:00</div><div class="a"><b>Probe design.</b> Groups sketch a variation of an artifact that would let them investigate one question (paper, role-play, or a modified system prompt).</div></div>
+      <div class="slot"><div class="t">1:00–1:15</div><div class="a"><b>Cross-group critique.</b> Gallery walk in which groups leave written responses on each other’s questions and probes.</div></div>
+      <div class="slot"><div class="t">1:15–1:30</div><div class="a"><b>Synthesis and next steps.</b> Recurring themes, a first shared vocabulary, volunteers for the synthesis paper, and follow-up plans.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACCEPTED PAPERS ============ -->
+<section class="block" id="papers">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Accepted Papers</h2></div>
+    <div class="placeholder">
+      <div class="big">Coming soon</div>
+      <p class="mono muted" style="margin:0">Accepted artifacts, demos, and position papers will be listed here after notifications go out on February 25, 2027.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORGANIZERS ============ -->
+<section class="block" id="organizers">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Organizers</h2></div>
+    <p>The organizing team combines expertise in human–AI interaction, interaction and speculative design, and AI/ML.</p>
+    <div class="grid-2" style="margin-top:22px">
+      <div class="card org">
+        <div class="avatar" aria-hidden="true">SQ</div>
+        <div>
+          <h4><a href="https://siyaqi.github.io/">Siya Qi</a></h4>
+          <div class="aff">King’s College London</div>
+          <p>Lead organizer, responsible for the overall program, participant selection, and the post-workshop synthesis.</p>
+        </div>
+      </div>
+      <div class="card org">
+        <div class="avatar" aria-hidden="true">YC</div>
+        <div>
+          <h4>Yoonseo Choi</h4>
+          <div class="aff">[Institution]</div>
+          <p>Leads the encounter-station design and the facilitation of the reaction-mapping activities.</p>
+        </div>
+      </div>
+      <div class="card org">
+        <div class="avatar tba" aria-hidden="true">?</div>
+        <div>
+          <h4>[Organizer 3]</h4>
+          <div class="aff">[Institution]</div>
+          <p>Responsible for the technical setup of demos, the shared online gallery, and offline materials.</p>
+        </div>
+      </div>
+      <div class="card org">
+        <div class="avatar tba" aria-hidden="true">?</div>
+        <div>
+          <h4>[Organizer 4]</h4>
+          <div class="aff">[Institution]</div>
+          <p>Leads the synthesis session and the write-up of the research agenda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Contact</h2></div>
+    <div class="contact">
+      <div>
+        <h3>Questions?</h3>
+        <p>Questions about submissions, the program, logistics, or accessibility and access needs? Please get in touch. Workshop participants must register for CHI 2027; see the <a href="https://chi2027.acm.org/authors/workshops/" style="color:var(--paper)">CHI 2027 workshops page</a> for conference-level details.</p>
+      </div>
+      <a class="mail" href="mailto:siya.qi@kcl.ac.uk">siya.qi@kcl.ac.uk</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>AI Otherwise · CHI 2027 Workshop</span>
+    <a href="#top">↑ Back to top</a>
+  </div>
+</footer>
+
+<script>
+  // Highlight the tab for the section currently in view.
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.tabs a'));
+    var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+    function update() {
+      var y = window.scrollY + 120, current = -1;
+      sections.forEach(function (s, i) { if (s && s.offsetTop <= y) current = i; });
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = sections.length - 1;
+      links.forEach(function (a, i) {
+        var on = i === current;
+        a.classList.toggle('active', on);
+        if (on) {
+          // keep the active tab visible when the tab bar scrolls horizontally (mobile)
+          var bar = a.parentNode;
+          bar.scrollLeft = a.offsetLeft - bar.offsetLeft - (bar.clientWidth - a.clientWidth) / 2;
+        }
+      });
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
+</body>
+</html>
