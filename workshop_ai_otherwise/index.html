@@ -241,30 +241,38 @@ sitemap: false
   .placeholder .big { font-family: var(--display); font-size: 26px; margin-bottom: 8px; }
 
   /* organizers */
-  .org { display: flex; gap: 18px; align-items: flex-start; }
+  .org { display: flex; gap: 20px; align-items: flex-start; }
   .avatar {
-    flex: 0 0 72px; height: 72px; display: grid; place-items: center;
-    background: var(--orange); border: 2px solid var(--ink);
-    font-family: var(--display); font-size: 26px;
+    flex: 0 0 112px; height: 112px; display: grid; place-items: center;
+    background: var(--orange); border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--orange);
+    font-family: var(--display); font-size: 30px;
   }
-  .avatar.tba { background: var(--paper-2); color: var(--muted); }
-  .org h4 { margin: 2px 0 2px; font: 600 19px/1.3 var(--sans); }
-  .org .aff { font: 500 13px/1.4 var(--mono); color: var(--muted); margin-bottom: 8px; }
-  .org p { font-size: 15px; line-height: 1.55; margin: 0; }
+  img.avatar { object-fit: cover; object-position: center 30%; background: var(--paper-2); }
+  .avatar.tba { background: var(--paper-2); color: var(--muted); box-shadow: none; }
+  .org h4 { margin: 2px 0 2px; font: 600 20px/1.3 var(--sans); }
+  .org h4 a { text-decoration: none; }
+  .org h4 a:hover { text-decoration: underline; text-decoration-color: var(--orange); }
+  .org .aff { font: 500 13px/1.4 var(--mono); color: var(--muted); margin-bottom: 10px; }
+  .org p { font-size: 15px; line-height: 1.55; margin: 0 0 10px; }
+  .org .role { font-size: 14px; color: var(--ink-2); border-left: 3px solid var(--orange); padding-left: 10px; margin: 12px 0 0; }
+  .topics { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 0; padding: 0; list-style: none; }
+  .topics li { font: 500 12px/1.2 var(--mono); padding: 5px 7px; border: 1.5px solid var(--ink); background: var(--paper); }
+  @media (max-width: 640px) {
+    .org { flex-direction: column; gap: 14px; }
+    .avatar { flex-basis: auto; width: 112px; }
+  }
 
   /* contact */
   .contact {
-    display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center;
-    background: var(--ink); color: var(--paper); padding: 34px; border: 2px solid var(--ink);
+    max-width: 540px;
+    background: var(--ink); color: var(--paper); padding: 28px 30px; border: 2px solid var(--ink);
     box-shadow: 8px 8px 0 var(--orange);
   }
-  .contact h3 { margin: 0 0 10px; font-family: var(--display); font-weight: 400; font-size: 26px; }
-  .contact p { color: #d8d2c6; margin-bottom: 0; }
-  .contact a.mail {
-    display: block; font: 600 17px/1.4 var(--mono); color: var(--ink); background: var(--orange);
-    padding: 14px 16px; text-decoration: none; word-break: break-all; text-align: center;
-  }
-  .contact a.mail:hover { color: var(--ink); background: #ff7a55; }
+  .contact h3 { margin: 0 0 10px; font-family: var(--display); font-weight: 400; font-size: 24px; }
+  .contact p { color: #d8d2c6; margin-bottom: 12px; font-size: 16px; }
+  .contact p:last-child { margin-bottom: 0; }
+  .contact a { color: var(--paper); }
+  .contact a:hover { color: var(--orange); }
 
   footer {
     margin-top: 72px; border-top: 3px solid var(--ink); padding: 22px 0 40px;
@@ -284,7 +292,6 @@ sitemap: false
     .probe { grid-template-columns: minmax(0, 1fr); }
     .probe > div { border-left: 0; border-top: 2px solid var(--ink); }
     .probe > div:first-child { border-top: 0; }
-    .contact { grid-template-columns: minmax(0, 1fr); }
   }
   @media (max-width: 640px) {
     body { font-size: 16px; }
@@ -374,9 +381,9 @@ sitemap: false
 
     <h3>Workshop goals</h3>
     <ol class="goals">
-      <li><strong>Expand the design space</strong> by assembling artifacts that depart from dominant defaults and making explicit which assumptions they invert.</li>
-      <li><strong>Understand human reactions</strong> through first-hand encounters with these artifacts, including how people adapt, resist, negotiate, enjoy, or form attachments to them.</li>
-      <li><strong>Build a community and shared vocabulary</strong> that connects work and carries the resulting insights into follow-up research: a curated gallery of alternative-AI probes and a research agenda beyond today’s assistant paradigm.</li>
+      <li><strong>Collect alternative AI designs.</strong> Bring together working systems, demos, and concepts that deliberately change a familiar AI behavior, such as memory, response speed, relevance, or compliance, and state clearly which default each one changes.</li>
+      <li><strong>Observe how people respond.</strong> Let participants try these systems first-hand and document how people adapt to, resist, or come to value AI that behaves differently from what they expect.</li>
+      <li><strong>Identify open research questions.</strong> Turn these observations into concrete research questions and design directions for human–AI interaction, shared after the workshop through an online gallery of the presented systems and a workshop summary.</li>
     </ol>
   </div>
 </section>
@@ -415,7 +422,7 @@ sitemap: false
     </div>
 
     <h3 style="margin-top:48px">Seed probes</h3>
-    <p class="muted">Example artifacts and the research questions they open. Each inverts one default of contemporary AI. These are only a starting point; we expect participants to bring many more.</p>
+    <p class="muted">Three example artifacts and the research questions they open. Each inverts one default of contemporary AI. These are only a starting point; we expect participants to bring many more.</p>
     <div class="probes">
       <div class="probe">
         <div><span class="lbl">Probe</span><b>Goldfish AI</b><span class="inv">Remembers only the last few turns (vs. <s>persistent memory</s>)</span></div>
@@ -431,16 +438,6 @@ sitemap: false
         <div><span class="lbl">Probe</span><b>Beside-the-point AI</b><span class="inv">Systematically answers a neighboring question (vs. <s>relevance to intended query</s>)</span></div>
         <div><span class="lbl">What people might do</span>Repair, reinterpret, negotiate, abandon, laugh</div>
         <div><span class="lbl">Question made askable</span>How do people repair and renegotiate meaning with a system that does not converge on their intent?</div>
-      </div>
-      <div class="probe">
-        <div><span class="lbl">Probe</span><b>Disobedient AI</b><span class="inv">Refuses to optimize the task or disagrees (vs. <s>compliance and agreement</s>)</span></div>
-        <div><span class="lbl">What people might do</span>Argue, justify, reconsider, disengage, feel challenged</div>
-        <div><span class="lbl">Question made askable</span>When can resistance, disagreement, or non-compliance create meaningful interaction, and under what consent and framing?</div>
-      </div>
-      <div class="probe">
-        <div><span class="lbl">Probe</span><b>Apprentice AI</b><span class="inv">Adopts a less knowledgeable, help-seeking role (vs. <s>the competent assistant</s>)</span></div>
-        <div><span class="lbl">What people might do</span>Explain, demonstrate, justify, teach, or take greater responsibility for the interaction</div>
-        <div><span class="lbl">Question made askable</span>How does interacting with an AI that needs explanation or guidance reshape users’ sense of expertise, responsibility, and relationship to the system?</div>
       </div>
     </div>
   </div>
@@ -481,7 +478,7 @@ sitemap: false
       <div><dt>Format</dt><dd>2–4 pages in the ACM single-column format (<a href="https://www.acm.org/publications/proceedings-template">ACM template</a>; <a href="https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc">Overleaf</a>), excluding references. Artifacts / demos may add an optional video or link.</dd></div>
       <div><dt>Review</dt><dd>Not anonymized. Reviewed by the organizers and a small program committee for relevance, potential to stimulate discussion, and clarity about which default is inverted and what it reveals.</dd></div>
       <div><dt>Publication</dt><dd>Non-archival. Accepted contributions are posted on this website with authors’ consent. Authors retain copyright, and website publication does not preclude later submission of extended work elsewhere.</dd></div>
-      <div><dt>Attendance</dt><dd>In person only. At least one author of each accepted contribution must register for CHI 2027 by the early registration deadline (March 4, 2027) and attend the workshop. Two weeks before the workshop, accepted contributions are shared among participants, and artifact contributors receive guidance on setting up an <em>encounter station</em> (3–5 minutes of hands-on interaction).</dd></div>
+      <div><dt>Attendance</dt><dd>In person only. At least one author of each accepted contribution must register for CHI 2027 by the early registration deadline (March 4, 2027) and attend the workshop. Two weeks before the workshop, accepted contributions are shared among participants, and artifact / demo authors receive guidance on setting up their demo for the demo session.</dd></div>
       <div><dt>Submit</dt><dd>Through the submission form (link TBA) by <strong>February 11, 2027</strong>, Anywhere on Earth.</dd></div>
     </dl>
 
@@ -503,7 +500,7 @@ sitemap: false
       <div class="trow key"><div class="d"><span class="tba">Thu, 11 Feb 2027</span></div><div class="w">Submission deadline, 23:59 Anywhere on Earth</div></div>
       <div class="trow key"><div class="d"><span class="tba">Thu, 25 Feb 2027</span></div><div class="w">Notification of acceptance</div></div>
       <div class="trow"><div class="d">Thu, 4 Mar 2027</div><div class="w">CHI 2027 early registration deadline (at least one author per contribution must register)</div></div>
-      <div class="trow"><div class="d">Late Apr 2027</div><div class="w">Accepted contributions shared; encounter-station guidance sent</div></div>
+      <div class="trow"><div class="d">Late Apr 2027</div><div class="w">Accepted contributions shared; demo setup guidance sent</div></div>
       <div class="trow key"><div class="d"><span class="tba">10–14 May 2027</span></div><div class="w">Workshop at CHI 2027, Pittsburgh, PA, USA (in person; exact day TBA)</div></div>
       <div class="trow"><div class="d">By Aug 2027</div><div class="w">Online probe gallery &amp; workshop summary published</div></div>
     </div>
@@ -515,27 +512,24 @@ sitemap: false
 <section class="block" id="schedule">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">05</span><h2>Schedule</h2></div>
-    <p>The format is deliberately experiential: participants feel the consequences of alternative AI behavior before discussing its implications, and <strong>no time is allocated to conventional paper presentations</strong>.</p>
-    <p class="note" style="margin-top:0">Tentative. Two consecutive 90-minute in-person sessions; exact times will be posted once CHI assigns the slot. Materials and synthesis notes will be posted here after the workshop.</p>
+    <p>The workshop runs as two consecutive 90-minute sessions: the first introduces the accepted work through short talks and live demos, and the second focuses on group discussion and research directions.</p>
+    <p class="note" style="margin-top:0">Tentative. Exact times will be posted once CHI assigns the slot. Slides and summary notes will be posted here after the workshop.</p>
 
     <div class="session">
-      <div class="session-title">Session 1 · Encountering AI Otherwise <small>90 min</small></div>
-      <div class="slot"><div class="t">0:00–0:10</div><div class="a"><b>Framing.</b> Premise, the probe chain, and the <em>defaults map</em> (a wall of taken-for-granted assumptions).</div></div>
-      <div class="slot"><div class="t">0:10–0:25</div><div class="a"><b>Lightning provocations.</b> Every contribution in 60 seconds: which default it inverts and one thing it made visible.</div></div>
-      <div class="slot"><div class="t">0:25–1:00</div><div class="a"><b>Encounter stations.</b> Three 10-minute rotations in which participants interact with artifacts and seed probes.</div></div>
-      <div class="slot"><div class="t">1:00–1:20</div><div class="a"><b>Reaction mapping.</b> In groups of 4–5, participants record on cards what felt surprising, frustrating, enjoyable, or useful, and which of their own strategies changed.</div></div>
-      <div class="slot"><div class="t">1:20–1:30</div><div class="a"><b>Assumption spotting.</b> Groups pin cards to the defaults map, naming the expectation each reaction exposed.</div></div>
+      <div class="session-title">Session 1 · Presentations &amp; Demos <small>90 min</small></div>
+      <div class="slot"><div class="t">0:00–0:10</div><div class="a"><b>Welcome and introduction.</b> Organizers introduce the workshop, its goals, and the plan for the day.</div></div>
+      <div class="slot"><div class="t">0:10–0:40</div><div class="a"><b>Lightning talks.</b> Each accepted contribution gives a short talk (about 2–3 minutes) on its system or position and what it found.</div></div>
+      <div class="slot"><div class="t">0:40–1:20</div><div class="a"><b>Demo session.</b> Authors of artifacts and demos show their systems at tables around the room; participants try them and talk with the authors.</div></div>
+      <div class="slot"><div class="t">1:20–1:30</div><div class="a"><b>Wrap-up.</b> Brief reflections from the room and formation of discussion groups for Session 2.</div></div>
     </div>
 
     <div class="break">☕ Break</div>
 
     <div class="session">
-      <div class="session-title">Session 2 · From Experience to Research Questions <small>90 min</small></div>
-      <div class="slot"><div class="t">0:00–0:10</div><div class="a"><b>Recap and clustering.</b> Organizers cluster the defaults map, and each group picks one cluster.</div></div>
-      <div class="slot"><div class="t">0:10–0:35</div><div class="a"><b>Reconsidering defaults.</b> For each default, groups record what it proved to be worth, how it could be designed differently, and what remains to be studied.</div></div>
-      <div class="slot"><div class="t">0:35–1:00</div><div class="a"><b>Probe design.</b> Groups sketch a variation of an artifact that would let them investigate one question (paper, role-play, or a modified system prompt).</div></div>
-      <div class="slot"><div class="t">1:00–1:15</div><div class="a"><b>Cross-group critique.</b> Gallery walk in which groups leave written responses on each other’s questions and probes.</div></div>
-      <div class="slot"><div class="t">1:15–1:30</div><div class="a"><b>Synthesis and next steps.</b> Recurring themes, a first shared vocabulary, volunteers for the synthesis paper, and follow-up plans.</div></div>
+      <div class="session-title">Session 2 · Discussion &amp; Research Directions <small>90 min</small></div>
+      <div class="slot"><div class="t">0:00–0:40</div><div class="a"><b>Small-group discussion.</b> Each group takes one workshop theme and discusses what the presented work reveals, what worked, and what remains unclear.</div></div>
+      <div class="slot"><div class="t">0:40–1:10</div><div class="a"><b>Group reports and open discussion.</b> Each group shares its key points and open research questions with the whole room.</div></div>
+      <div class="slot"><div class="t">1:10–1:30</div><div class="a"><b>Research agenda and closing.</b> Summary of the main questions and directions, plans for the online gallery and workshop summary, and next steps.</div></div>
     </div>
   </div>
 </section>
@@ -558,19 +552,27 @@ sitemap: false
     <p>The organizing team combines expertise in human–AI interaction, interaction and speculative design, and AI/ML.</p>
     <div class="grid-2" style="margin-top:22px">
       <div class="card org">
-        <div class="avatar" aria-hidden="true">SQ</div>
+        <img class="avatar" src="siya.jpg" alt="Photo of Siya Qi" width="112" height="112" loading="lazy">
         <div>
           <h4><a href="https://siyaqi.github.io/">Siya Qi</a></h4>
-          <div class="aff">King’s College London</div>
-          <p>Lead organizer, responsible for the overall program, participant selection, and the post-workshop synthesis.</p>
+          <div class="aff">Ph.D. Student, King’s College London</div>
+          <p>Siya is a Ph.D. student in Natural Language Processing at King’s College London, supervised by Dr. Lin Gui, Dr. Zheng Yuan, and Prof. Yulan He. Her research focuses on LLM reliability and real-world applications of large language models.</p>
+          <ul class="topics" aria-label="Research topics">
+            <li>LLM hallucination</li><li>Post-training &amp; RL</li><li>LLM agents</li><li>Theory of Mind</li><li>Mechanistic interpretability</li>
+          </ul>
+          <p class="role">Lead organizer: overall program, participant selection, and the post-workshop synthesis.</p>
         </div>
       </div>
       <div class="card org">
-        <div class="avatar" aria-hidden="true">YC</div>
+        <img class="avatar" src="yoonseo.jpg" alt="Photo of Yoonseo Choi" width="112" height="112" loading="lazy">
         <div>
-          <h4>Yoonseo Choi</h4>
-          <div class="aff">[Institution]</div>
-          <p>Leads the encounter-station design and the facilitation of the reaction-mapping activities.</p>
+          <h4><a href="https://yoonseochoi.com/">Yoonseo Choi</a></h4>
+          <div class="aff">Ph.D. Student, KAIST</div>
+          <p>Yoonseo is a Ph.D. student at KAIST, working with Prof. Juho Kim. She explores how user perspectives can be represented, interpreted, and integrated throughout the lifecycle of AI-mediated systems, through <em>Generative Proxies</em>: interactive, data-grounded representations of users’ diverse perspectives and goals, distilled from existing user data with LLMs.</p>
+          <ul class="topics" aria-label="Research topics">
+            <li>Human–AI interaction</li><li>Generative proxies</li><li>Creator ecosystems</li><li>Search &amp; recommendation</li><li>Responsible AI</li>
+          </ul>
+          <p class="role">Leads the demo session and the facilitation of group discussions.</p>
         </div>
       </div>
       <div class="card org">
@@ -578,7 +580,7 @@ sitemap: false
         <div>
           <h4>[Organizer 3]</h4>
           <div class="aff">[Institution]</div>
-          <p>Responsible for the technical setup of demos, the shared online gallery, and offline materials.</p>
+          <p class="role">Technical setup of demos, the shared online gallery, and offline materials.</p>
         </div>
       </div>
       <div class="card org">
@@ -586,7 +588,7 @@ sitemap: false
         <div>
           <h4>[Organizer 4]</h4>
           <div class="aff">[Institution]</div>
-          <p>Leads the synthesis session and the write-up of the research agenda.</p>
+          <p class="role">Leads the closing discussion and the write-up of the workshop summary.</p>
         </div>
       </div>
     </div>
@@ -598,11 +600,9 @@ sitemap: false
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">08</span><h2>Contact</h2></div>
     <div class="contact">
-      <div>
-        <h3>Questions?</h3>
-        <p>Questions about submissions, the program, logistics, or accessibility and access needs? Please get in touch. Workshop participants must register for CHI 2027; see the <a href="https://chi2027.acm.org/authors/workshops/" style="color:var(--paper)">CHI 2027 workshops page</a> for conference-level details.</p>
-      </div>
-      <a class="mail" href="mailto:siya.qi@kcl.ac.uk">siya.qi@kcl.ac.uk</a>
+      <h3>Questions?</h3>
+      <p>For questions about submissions, the program, logistics, or access needs, please <a href="mailto:siya.qi@kcl.ac.uk">email the organizers</a>.</p>
+      <p>Workshop participants must register for CHI 2027; see the <a href="https://chi2027.acm.org/authors/workshops/">CHI 2027 workshops page</a> for conference-level details.</p>
     </div>
   </div>
 </section>
