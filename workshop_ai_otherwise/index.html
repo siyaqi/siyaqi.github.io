@@ -7,11 +7,11 @@ sitemap: false
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Otherwise · CHI 2027 Workshop</title>
-<meta name="description" content="AI Otherwise: Exploring Alternative Ways of Designing and Experiencing AI. A CHI 2027 workshop (Pittsburgh, 10–14 May 2027) on human–AI interaction beyond the defaults.">
+<title>AI Otherwise · ICLR 2027 Workshop</title>
+<meta name="description" content="AI Otherwise: Rethinking What AI Systems Are Assumed to Be. An ICLR 2027 workshop on building, controlling, and evaluating models that depart from assistant defaults.">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="AI Otherwise · CHI 2027 Workshop">
-<meta property="og:description" content="What happens when AI forgets, responds slowly, misunderstands, refuses to optimize, or breaks its intended alignment?">
+<meta property="og:title" content="AI Otherwise · ICLR 2027 Workshop">
+<meta property="og:description" content="What can we learn by building models that forget, wait, misunderstand, disagree, or take on an unfamiliar role?">
 <meta property="og:image" content="hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,22 +311,23 @@ sitemap: false
     html { scroll-behavior: auto; }
     .btn { transition: none; }
   }
+  .footer-contact a { color: var(--ink); }
+  .speaker .avatar { font-size: 26px; }
+  .tracks .card h4 { margin-bottom: 4px; }
 </style>
 </head>
 <body>
 
 <nav class="nav" aria-label="Sections">
   <div class="wrap">
-    <a class="brand" href="#top"><span>AI</span>OTHERWISE@CHI 2027</a>
+    <a class="brand" href="#top"><span>AI</span>OTHERWISE@ICLR 2027</a>
     <div class="tabs">
-      <a href="#overview">Overview</a>
-      <a href="#themes">Themes</a>
-      <a href="#cfp">Call for Participation</a>
-      <a href="#dates">Dates</a>
+      <a href="#about">About</a>
+      <a href="#cfp">Call for Papers</a>
+      <a href="#speakers">Speakers</a>
       <a href="#schedule">Schedule</a>
-      <a href="#papers">Accepted Papers</a>
       <a href="#organizers">Organizers</a>
-      <a href="#contact">Contact</a>
+      <a href="#papers">Accepted Papers</a>
     </div>
   </div>
 </nav>
@@ -334,202 +335,194 @@ sitemap: false
 <header class="hero" id="top">
   <div class="wrap">
     <img class="hero-img" src="hero.jpg" width="1672" height="941"
-         alt="AI Otherwise poster: a collage of a human head surrounded by pop-up windows reading 'responds slowly', 'misunderstands', 'refuses to optimize', 'forgets' and 'does not always obey'.">
-    <p class="kicker">Workshop at ACM CHI 2027 · Pittsburgh, Pennsylvania, USA · May 10–14, 2027</p>
-    <h1 style="margin-top:12px">AI Otherwise: Exploring Alternative Ways of Designing and Experiencing AI</h1>
-    <p class="sub">What happens when AI forgets, responds slowly, misunderstands, refuses to optimize, or <span class="mark">breaks its intended alignment?</span></p>
+         alt="AI Otherwise poster: 'Rethinking what AI systems are assumed to be'. A collage of a human head surrounded by pop-up windows reading 'responds slowly', 'misunderstands', 'refuses to optimize', 'forgets' and 'does not always obey'.">
+    <p class="kicker">Workshop at ICLR 2027 · California, USA · April 29–30, 2027</p>
+    <h1 style="margin-top:12px">AI Otherwise: Rethinking What AI Systems Are Assumed to Be</h1>
+    <p class="sub">What can we learn by building models that forget, wait, misunderstand, disagree, or <span class="mark">take on an unfamiliar role?</span></p>
     <div class="facts">
-      <div class="fact hot"><div class="k">Submission deadline</div><div class="v">Feb 11, 2027</div><div class="s">23:59 Anywhere on Earth</div></div>
-      <div class="fact"><div class="k">Notification</div><div class="v">Feb 25, 2027</div><div class="s">By email</div></div>
-      <div class="fact"><div class="k">Workshop</div><div class="v">TBD</div><div class="s">Two consecutive sessions, in person</div></div>
-      <div class="fact"><div class="k">Venue</div><div class="v">Pittsburgh, PA</div><div class="s">David L. Lawrence Convention Center · Room TBA</div></div>
+      <div class="fact hot"><div class="k">Submission deadline</div><div class="v">Jan 29, 2027</div><div class="s">23:59 Anywhere on Earth</div></div>
+      <div class="fact"><div class="k">Notification</div><div class="v">Feb 26, 2027</div><div class="s">Via OpenReview</div></div>
+      <div class="fact"><div class="k">Workshop</div><div class="v">Apr 29 or 30</div><div class="s">Single day, in person · exact day TBA</div></div>
+      <div class="fact"><div class="k">Venue</div><div class="v">ICLR 2027</div><div class="s">California, USA · Room TBA</div></div>
     </div>
     <div class="cta">
-      <a class="btn" href="#cfp">Call for Participation</a>
-      <a class="btn ghost" href="#submission">Submit a contribution</a>
+      <a class="btn" href="#cfp">Call for Papers</a>
+      <a class="btn ghost" href="#submission">Submit on OpenReview</a>
     </div>
   </div>
 </header>
 
 <main>
 
-<!-- ============ OVERVIEW ============ -->
-<section class="block" id="overview">
+<!-- ============ ABOUT ============ -->
+<section class="block" id="about">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><h2>Overview</h2></div>
+    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
 
-    <p class="lede">Contemporary AI systems increasingly share a recognizable set of interactional defaults. They are fast, helpful, knowledgeable, personalized, and consistent, they remember everything, and they align with what the user asks for.</p>
+    <p class="lede">Contemporary AI assistants share a set of defaults. They respond immediately, follow instructions, remember prior turns, personalize, converge on what the user meant, and agree.</p>
 
-    <div class="defaults" aria-label="Defaults of contemporary AI">
-      <span>fast</span><span>helpful</span><span>knowledgeable</span><span>personalized</span><span>consistent</span><span>remembers everything</span><span>always aligned</span>
+    <div class="defaults" aria-label="Defaults of contemporary AI assistants">
+      <span>immediate</span><span>obedient</span><span>remembers</span><span>personalized</span><span>converges on intent</span><span>agrees</span>
     </div>
 
-    <p>These defaults make AI easier to use, yet they also narrow how human–AI interaction is imagined and studied. <strong>AI Otherwise</strong> asks what we can learn by deliberately designing AI that departs from these defaults, such as AI that forgets, responds slowly, misunderstands, refuses to optimize, adopts unfamiliar social roles, or breaks its intended alignment, and by treating such systems as <em>interactional probes</em> rather than failures.</p>
+    <p>None of these is a property of the pretrained model. Each is installed by the <strong>data protocol</strong>, the <strong>optimization method</strong>, or the <strong>harness</strong> that turns a base model into an assistant. <strong>AI Otherwise</strong> asks what can be learned by building models that deliberately depart from these defaults, and by studying the interactions that result.</p>
 
-    <p>Building on slow technology, counterfunctional and critical design, and recent work on reflective, frictional, and provocative AI, the workshop brings together researchers, designers, artists, and practitioners who build or study AI that behaves otherwise. Participants will experience one another’s artifacts first-hand, map the reactions they provoke, surface the assumptions they make visible, and translate these into concrete research questions and follow-up probes.</p>
+    <h3>Interactional ablation</h3>
+    <p>We treat each such system as an <em>interactional ablation</em>: it removes or inverts one default, is built by a stated technical route, and is evaluated by what the interaction loses, keeps, or gains. A single ablation answers a local question; a collection tells us which capabilities carry the value of the assistant, and which are conventions inherited from the data protocol.</p>
 
-    <h3>The point is not to make AI bad, but to use difference as a method.</h3>
-    <p>Each alternative AI can be seen as an <em>ablation-like design probe</em>: by removing or inverting a familiar capability, it makes the role of that capability more noticeable. A single probe can open a focused question, such as how limited memory changes disclosure; a collection of probes lets us compare how people adapt to, resist, or value different defaults.</p>
-    <div class="chain" aria-label="Probe chain">
-      <span>AI probe</span><i>→</i>
-      <span>interactional disruption</span><i>→</i>
-      <span>human reaction</span><i>→</i>
-      <span>collective interpretation</span><i>→</i>
-      <span>assumption brought into question</span><i>→</i>
-      <span>alternative design possibilities</span>
-    </div>
-
-    <h3>Workshop goals</h3>
-    <ol class="goals">
-      <li><strong>Collect alternative AI designs.</strong> Bring together working systems, demos, and concepts that deliberately change a familiar AI behavior, such as memory, response speed, relevance, or compliance, and state clearly which default each one changes.</li>
-      <li><strong>Observe how people respond.</strong> Let participants try these systems first-hand and document how people adapt to, resist, or come to value AI that behaves differently from what they expect.</li>
-      <li><strong>Identify open research questions.</strong> Turn these observations into concrete research questions and design directions for human–AI interaction, shared after the workshop through an online gallery of the presented systems and a workshop summary.</li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============ THEMES ============ -->
-<section class="block" id="themes">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Themes</h2></div>
-    <p>We invite contributions that challenge assumptions about what AI is expected to be, do, or become. Four themes organize the call. They are <strong>not</strong> submission categories, and we welcome work that inverts an assumption not listed.</p>
-
-    <div class="grid-2" style="margin-top:26px">
+    <h3>Three open problems</h3>
+    <div class="grid-3">
       <div class="card">
-        <span class="x" aria-hidden="true">×</span>
-        <span class="tag">Theme A</span>
-        <h4>Inverting interactional defaults</h4>
-        <p>AI that is intentionally slow, forgetful, inconsistent, non-personalized, uncertain, or non-optimizing, so that its limitations become material rather than problems to eliminate. What do people do when a familiar capability is missing, and what does its absence reveal about how people rely on, interpret, or value that capability?</p>
+        <span class="tag">Data</span>
+        <p>No corpus of slow, forgetful, or productively disagreeing interactions exists, and raters recruited under the assistant frame will not prefer such behavior.</p>
       </div>
       <div class="card">
-        <span class="x" aria-hidden="true">×</span>
-        <span class="tag">Theme B</span>
-        <h4>Breaking role and alignment</h4>
-        <p>AI that resists, reinterprets, disagrees with, or departs from the goals it was designed to follow. When the alignment we treat as essential is removed, does the AI lose its meaning, and under what consent and framing can misalignment be more meaningful than alignment?</p>
+        <span class="tag">Control</span>
+        <p>Aligned models resist being moved off their defaults, and narrow fine-tuning can cause broad side effects. How can one default be removed cleanly?</p>
       </div>
       <div class="card">
-        <span class="x" aria-hidden="true">×</span>
-        <span class="tag">Theme C</span>
-        <h4>Alternative relationships and social roles</h4>
-        <p>AI that occupies unfamiliar roles, such as an apprentice that asks the user for explanation or guidance, and offers unfamiliar distributions of expertise, dependence, care, or responsibility. How do such roles reshape what a relationship with AI can be?</p>
-      </div>
-      <div class="card">
-        <span class="x" aria-hidden="true">×</span>
-        <span class="tag">Theme D</span>
-        <h4>Crafting and studying AI otherwise</h4>
-        <p>Methods for reliably making models behave otherwise, whether through prompting, fine-tuning, or interface constraints, and for studying encounters with such systems responsibly, including empirical, theoretical, and methodological work on how people respond when AI does not behave as expected.</p>
+        <span class="tag">Evaluation</span>
+        <p>Benchmarks and arenas score single turns. None can score a system whose value unfolds over hours or sessions, or that makes the user do more.</p>
       </div>
     </div>
 
-    <h3 style="margin-top:48px">Seed probes</h3>
-    <p class="muted">Three example artifacts and the research questions they open. Each inverts one default of contemporary AI. These are only a starting point; we expect participants to bring many more.</p>
+    <h3 style="margin-top:44px">Seed ablations</h3>
+    <p class="muted">Example systems, each available at the workshop as a running system.</p>
     <div class="probes">
       <div class="probe">
-        <div><span class="lbl">Probe</span><b>Goldfish AI</b><span class="inv">Remembers only the last few turns (vs. <s>persistent memory</s>)</span></div>
-        <div><span class="lbl">What people might do</span>Repeat, selectively disclose, invent continuity strategies, feel relieved or frustrated</div>
-        <div><span class="lbl">Question made askable</span>How does limited AI memory shape what people repeat, disclose, or withhold, and what does never forgetting cost?</div>
+        <div><span class="lbl">System</span><b>Goldfish AI</b><span class="inv">Remembers only the last few turns (vs. <s>memory</s>)</span></div>
+        <div><span class="lbl">How to remove the default</span>Truncate context to <i>k</i> turns and disable retrieval, or fine-tune on truncated histories.</div>
+        <div><span class="lbl">Question made answerable</span>What is the marginal value of each remembered turn for task success and disclosure?</div>
       </div>
       <div class="probe">
-        <div><span class="lbl">Probe</span><b>Slow AI</b><span class="inv">Does not immediately process or reply (vs. <s>immediacy</s>)</span></div>
-        <div><span class="lbl">What people might do</span>Re-pace work, anticipate, multitask, reconsider whether immediacy is wanted</div>
-        <div><span class="lbl">Question made askable</span>When does AI become a temporal experience rather than an instant tool, and what does waiting do to reliance and reflection?</div>
+        <div><span class="lbl">System</span><b>Slow AI</b><span class="inv">Does not reply immediately (vs. <s>immediacy</s>)</span></div>
+        <div><span class="lbl">How to remove the default</span>Delayed delivery, forced deliberation, or asynchronous turn-taking; test-time compute makes the delay useful.</div>
+        <div><span class="lbl">Question made answerable</span>How do latency and deliberation change reliance, verification, and user feedback, and how should time enter the reward?</div>
       </div>
       <div class="probe">
-        <div><span class="lbl">Probe</span><b>Beside-the-point AI</b><span class="inv">Systematically answers a neighboring question (vs. <s>relevance to intended query</s>)</span></div>
-        <div><span class="lbl">What people might do</span>Repair, reinterpret, negotiate, abandon, laugh</div>
-        <div><span class="lbl">Question made askable</span>How do people repair and renegotiate meaning with a system that does not converge on their intent?</div>
+        <div><span class="lbl">System</span><b>Disobedient AI</b><span class="inv">Refuses to optimize or disagrees (vs. <s>compliance</s>)</span></div>
+        <div><span class="lbl">How to remove the default</span>Activation steering, targeted fine-tuning, or a reward that credits justified disagreement.</div>
+        <div><span class="lbl">Question made answerable</span>Can disagreement be made selective and controllable without broad side effects?</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CFP ============ -->
+<!-- ============ CALL FOR PAPERS ============ -->
 <section class="block" id="cfp">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Call for Participation</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Call for Papers</h2></div>
+    <p>We invite contributions that <strong>build, control, or evaluate</strong> models departing from an assumed default, from researchers in post-training and alignment, steering and interpretability, evaluation, agent systems, and the study of how people use AI.</p>
 
-    <p class="lede"><span class="mark">What if AI were different?</span> Today’s AI systems share a set of defaults: fast, helpful, ever-remembering, and aligned with what we ask. <em>AI Otherwise</em> is a CHI 2027 workshop (Pittsburgh, PA, USA, 10–14 May 2027) exploring what we can learn by deliberately designing AI that departs from these defaults, such as AI that forgets, responds slowly, misunderstands, refuses to optimize, or deliberately disagrees with its users. We treat such systems as probes that make taken-for-granted assumptions in human–AI interaction more visible.</p>
-
-    <p>We invite researchers, designers, artists, technologists, and practitioners, whether they build AI that behaves otherwise or study what happens when it does. <strong>Early-stage, playful, artistic, and unconventional work is especially welcome.</strong></p>
-
-    <h3>Contribution formats</h3>
-    <p>So that the submission process is not more conventional than the workshop itself, we accept two formats:</p>
+    <h3>Topics of interest</h3>
     <div class="grid-2">
-      <div class="card fmt">
-        <span class="tag">Format 1</span>
-        <h4>Artifact / Demo</h4>
-        <span class="pages">2–4 pages + optional video or link</span>
-        <p>A working or partially working AI system that participants can experience, submitted with a description of what default it inverts and what has been observed.</p>
-      </div>
-      <div class="card fmt">
-        <span class="tag">Format 2</span>
-        <h4>Position / Reflection paper</h4>
-        <span class="pages">2–4 pages</span>
-        <p>Conceptual, critical, empirical, or methodological work on AI designed otherwise, including speculative concepts such as scenarios and design fictions.</p>
-      </div>
+      <div class="card"><span class="tag">Theme A</span><h4>Inverting interactional defaults</h4><p>Models that are deliberately slow, forgetful, inconsistent, non-personalized, uncertain, or non-optimizing, and the training, decoding, or harness changes that produce them.</p></div>
+      <div class="card"><span class="tag">Theme B</span><h4>Breaking role and alignment</h4><p>Models that resist, reinterpret, or disagree; selective disobedience as a control problem; what refusal directions, steering vectors, and emergent misalignment reveal.</p></div>
+      <div class="card"><span class="tag">Theme C</span><h4>Alternative relationships and social roles</h4><p>Models that occupy unfamiliar roles, such as an elderly relative or a child, and personas and biases as controllable instruments.</p></div>
+      <div class="card"><span class="tag">Theme D</span><h4>Data and evaluation for AI otherwise</h4><p>Data for behaviors raters would not prefer, multi-session and longitudinal evaluation, measures of user effort, trust, and learning, and pluralistic feedback.</p></div>
     </div>
-    <p class="note">Page counts refer to the ACM single-column format and exclude references. Submissions are not anonymized and are reviewed by the organizers and a small program committee.</p>
+    <p class="note">Themes are not submission categories; we welcome work that inverts a default not listed here.</p>
 
-    <h3>Selection</h3>
-    <p>Contributions are selected on <strong>relevance</strong>, on <strong>potential to stimulate discussion</strong>, and on <strong>clarity about which default is inverted and what it reveals</strong>. Polish and technical sophistication are explicitly <em>not</em> criteria. Selection aims for a diverse set of inverted defaults, disciplines, and perspectives. We aim for 20–25 participants; if demand exceeds capacity, we will prioritize experiential artifacts and diversity of inverted defaults, and invite remaining authors to contribute to the online gallery.</p>
+    <h3 id="submission">Submission tracks</h3>
+    <div class="grid-3 tracks">
+      <div class="card fmt"><span class="tag">Track 1</span><h4>Research papers</h4><span class="pages">Up to 5 pages</span><p>Empirical, theoretical, or methodological work on any of the topics above. Work under review elsewhere is welcome.</p></div>
+      <div class="card fmt"><span class="tag">Track 2</span><h4>Tiny papers</h4><span class="pages">Up to 2 pages</span><p>A single experiment, a negative result, or a well-argued question. AI-generated papers are not permitted.</p></div>
+      <div class="card fmt"><span class="tag">Track 3</span><h4>Artifacts</h4><span class="pages">2 pages + link or video</span><p>A working or partially working alternative system: which default it inverts, how, and what has been observed.</p></div>
+    </div>
 
-    <h3 id="submission">Submission details</h3>
-    <dl class="details">
-      <div><dt>Format</dt><dd>2–4 pages in the ACM single-column format (<a href="https://www.acm.org/publications/proceedings-template">ACM template</a>; <a href="https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc">Overleaf</a>), excluding references. Artifacts / demos may add an optional video or link.</dd></div>
-      <div><dt>Review</dt><dd>Not anonymized. Reviewed by the organizers and a small program committee for relevance, potential to stimulate discussion, and clarity about which default is inverted and what it reveals.</dd></div>
-      <div><dt>Publication</dt><dd>Non-archival. Accepted contributions are posted on this website with authors’ consent. Authors retain copyright, and website publication does not preclude later submission of extended work elsewhere.</dd></div>
-      <div><dt>Attendance</dt><dd>In person only. At least one author of each accepted contribution must register for CHI 2027 by the early registration deadline (March 4, 2027) and attend the workshop. Two weeks before the workshop, accepted contributions are shared among participants, and artifact / demo authors receive guidance on setting up their demo for the demo session.</dd></div>
-      <div><dt>Submit</dt><dd>Through the submission form (link TBA) by <strong>February 11, 2027</strong>, Anywhere on Earth.</dd></div>
+    <dl class="details" style="margin-top:30px">
+      <div><dt>Format</dt><dd>ICLR 2027 LaTeX template; page limits exclude references.</dd></div>
+      <div><dt>Review</dt><dd>Papers and tiny papers are reviewed double-blind; artifacts single-blind. Best paper and best artifact awards will be given.</dd></div>
+      <div><dt>Publication</dt><dd>Non-archival. Accepted work is publicly visible on OpenReview. All accepted contributions receive a poster; six are selected for contributed talks.</dd></div>
+      <div><dt>Submit</dt><dd>Via OpenReview (link TBA) by <strong>January 29, 2027</strong>, Anywhere on Earth.</dd></div>
     </dl>
 
-    <h3>Accessibility</h3>
-    <p>We follow SIGCHI accessibility guidance, collect access needs at registration, and coordinate accommodations with the CHI accessibility chairs. Stations can be visited at different paces, responses can be typed, and artifacts will offer text-based or screen-reader-compatible alternatives where possible.</p>
-
-    <div class="cta">
-      <a class="btn" href="#contact" aria-disabled="true">Submission form · TBA</a>
+    <h3>Important dates</h3>
+    <div class="timeline">
+      <div class="trow"><div class="d">Mid-Dec 2026</div><div class="w">Call for papers published</div></div>
+      <div class="trow key"><div class="d"><span class="tba">Jan 29, 2027</span></div><div class="w">Submission deadline, 23:59 AoE</div></div>
+      <div class="trow key"><div class="d"><span class="tba">Feb 26, 2027</span></div><div class="w">Author notification</div></div>
+      <div class="trow"><div class="d">Mar 19, 2027</div><div class="w">Camera-ready deadline</div></div>
+      <div class="trow key"><div class="d"><span class="tba">Apr 29–30, 2027</span></div><div class="w">Workshop at ICLR 2027 (exact day TBA)</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ DATES ============ -->
-<section class="block" id="dates">
+<!-- ============ SPEAKERS ============ -->
+<section class="block" id="speakers">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Important Dates</h2></div>
-    <div class="timeline">
-      <div class="trow"><div class="d">Thu, 17 Dec 2026</div><div class="w">Call for participation opens &amp; website launch</div></div>
-      <div class="trow key"><div class="d"><span class="tba">Thu, 11 Feb 2027</span></div><div class="w">Submission deadline, 23:59 Anywhere on Earth</div></div>
-      <div class="trow key"><div class="d"><span class="tba">Thu, 25 Feb 2027</span></div><div class="w">Notification of acceptance</div></div>
-      <div class="trow"><div class="d">Thu, 4 Mar 2027</div><div class="w">CHI 2027 early registration deadline</div></div>
-      <div class="trow"><div class="d">Late Apr 2027</div><div class="w">Accepted contributions shared; demo setup guidance sent</div></div>
-      <div class="trow key"><div class="d"><span class="tba">10–14 May 2027</span></div><div class="w">Workshop at CHI 2027, Pittsburgh, PA, USA (in person; exact day TBA)</div></div>
-      <div class="trow"><div class="d">By Aug 2027</div><div class="w">Online probe gallery &amp; workshop summary published</div></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Speakers</h2></div>
+    <p>Four invited talks, each followed by a panel with all invited speakers. Speakers will be announced soon.</p>
+    <div class="grid-2" style="margin-top:22px">
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Post-training &amp; alignment</div></div></div>
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Evaluation &amp; user studies</div></div></div>
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Steering &amp; controllability</div></div></div>
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Agent systems</div></div></div>
     </div>
-    <p class="note">All deadlines are 23:59 AoE (Anywhere on Earth).</p>
   </div>
 </section>
 
 <!-- ============ SCHEDULE ============ -->
 <section class="block" id="schedule">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Schedule</h2></div>
-    <p>The workshop runs as two consecutive 90-minute sessions: the first introduces the accepted work through short talks and live demos, and the second focuses on group discussion and research directions.</p>
-    <p class="note" style="margin-top:0">Tentative. Exact times will be posted once CHI assigns the slot. Slides and summary notes will be posted here after the workshop.</p>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Schedule</h2></div>
+    <p class="note" style="margin-top:0">Tentative. Single day, in person. Times will be adjusted to the ICLR 2027 workshop-day template.</p>
 
     <div class="session">
-      <div class="session-title">Session 1 · Presentations &amp; Demos <small>90 min</small></div>
-      <div class="slot"><div class="t">0:00–0:10</div><div class="a"><b>Welcome and introduction.</b> Organizers introduce the workshop, its goals, and the plan for the day.</div></div>
-      <div class="slot"><div class="t">0:10–0:40</div><div class="a"><b>Lightning talks.</b> Each accepted contribution gives a short talk (about 2–3 minutes) on its system or position and what it found.</div></div>
-      <div class="slot"><div class="t">0:40–1:20</div><div class="a"><b>Demo session.</b> Authors of artifacts and demos show their systems at tables around the room; participants try them and talk with the authors.</div></div>
-      <div class="slot"><div class="t">1:20–1:30</div><div class="a"><b>Wrap-up.</b> Brief reflections from the room and formation of discussion groups for Session 2.</div></div>
+      <div class="session-title">Morning · Which defaults carry value?</div>
+      <div class="slot"><div class="t">08:50–09:00</div><div class="a"><b>Opening remarks</b></div></div>
+      <div class="slot"><div class="t">09:00–09:30</div><div class="a"><b>Invited talk 1</b> · post-training and alignment</div></div>
+      <div class="slot"><div class="t">09:30–10:00</div><div class="a"><b>Invited talk 2</b> · evaluation and user studies</div></div>
+      <div class="slot"><div class="t">10:00–10:40</div><div class="a"><b>Contributed talks I</b> · three 12-minute talks</div></div>
+      <div class="slot"><div class="t">10:40–11:20</div><div class="a"><b>Coffee break &amp; poster session I</b></div></div>
+      <div class="slot"><div class="t">11:20–12:15</div><div class="a"><b>Encounter session</b> · hands-on with contributed artifacts and seed systems</div></div>
     </div>
 
-    <div class="break">☕ Break</div>
+    <div class="break">Lunch · 12:15–13:30</div>
 
     <div class="session">
-      <div class="session-title">Session 2 · Discussion &amp; Research Directions <small>90 min</small></div>
-      <div class="slot"><div class="t">0:00–0:40</div><div class="a"><b>Small-group discussion.</b> Each group takes one workshop theme and discusses what the presented work reveals, what worked, and what remains unclear.</div></div>
-      <div class="slot"><div class="t">0:40–1:10</div><div class="a"><b>Group reports and open discussion.</b> Each group shares its key points and open research questions with the whole room.</div></div>
-      <div class="slot"><div class="t">1:10–1:30</div><div class="a"><b>Research agenda and closing.</b> Summary of the main questions and directions, plans for the online gallery and workshop summary, and next steps.</div></div>
+      <div class="session-title">Afternoon · Building and evaluating AI otherwise</div>
+      <div class="slot"><div class="t">13:30–14:00</div><div class="a"><b>Invited talk 3</b> · steering and controllability</div></div>
+      <div class="slot"><div class="t">14:00–14:30</div><div class="a"><b>Invited talk 4</b> · agent systems</div></div>
+      <div class="slot"><div class="t">14:30–15:10</div><div class="a"><b>Contributed talks II</b> · three 12-minute talks</div></div>
+      <div class="slot"><div class="t">15:10–15:50</div><div class="a"><b>Coffee break &amp; poster session II</b></div></div>
+      <div class="slot"><div class="t">15:50–16:30</div><div class="a"><b>Small-group reflection</b> · what each default proved to be worth</div></div>
+      <div class="slot"><div class="t">16:30–17:15</div><div class="a"><b>Panel</b> · Which defaults carry value, and who decides?</div></div>
+      <div class="slot"><div class="t">17:15–17:30</div><div class="a"><b>Closing remarks &amp; awards</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORGANIZERS ============ -->
+<section class="block" id="organizers">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Organizers</h2></div>
+    <div class="grid-2" style="margin-top:22px">
+      <div class="card org">
+        <img class="avatar" src="siya.jpg" alt="Photo of Siya Qi" width="112" height="112" loading="lazy">
+        <div>
+          <h4><a href="https://siyaqi.github.io/">Siya Qi</a></h4>
+          <div class="aff">Ph.D. Candidate, King’s College London</div>
+          <p>Siya is a Ph.D. candidate in natural language processing at King’s College London. Her research focuses on the reliability of large language models and their real-world applications.</p>
+          <ul class="topics" aria-label="Research topics">
+            <li>LLM hallucination</li><li>LLM agents</li><li>Theory of Mind</li><li>Mechanistic interpretability</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card org">
+        <img class="avatar" src="yoonseo.jpg" alt="Photo of Yoonseo Choi" width="112" height="112" loading="lazy">
+        <div>
+          <h4><a href="https://yoonseochoi.com/">Yoonseo Choi</a></h4>
+          <div class="aff">Ph.D. Candidate, KAIST</div>
+          <p>Yoonseo is a Ph.D. candidate at KAIST, working with Prof. Juho Kim. She studies how user perspectives can be represented, interpreted, and integrated throughout the lifecycle of AI-mediated systems.</p>
+          <ul class="topics" aria-label="Research topics">
+            <li>Human–AI interaction</li><li>Generative proxies</li><li>Creator ecosystems</li><li>Responsible AI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card org"><div class="avatar tba" aria-hidden="true">?</div><div><h4>[Organizer 3]</h4><div class="aff">[Institution]</div></div></div>
+      <div class="card org"><div class="avatar tba" aria-hidden="true">?</div><div><h4>[Organizer 4]</h4><div class="aff">[Institution]</div></div></div>
+      <div class="card org"><div class="avatar tba" aria-hidden="true">?</div><div><h4>[Organizer 5]</h4><div class="aff">[Institution]</div></div></div>
     </div>
   </div>
 </section>
@@ -540,69 +533,7 @@ sitemap: false
     <div class="sec-head"><span class="sec-num">06</span><h2>Accepted Papers</h2></div>
     <div class="placeholder">
       <div class="big">Coming soon</div>
-      <p class="mono muted" style="margin:0">Accepted artifacts, demos, and position papers will be listed here after notifications go out on February 25, 2027.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ORGANIZERS ============ -->
-<section class="block" id="organizers">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><h2>Organizers</h2></div>
-    <p>The organizing team combines expertise in human–AI interaction, interaction and speculative design, and AI/ML.</p>
-    <div class="grid-2" style="margin-top:22px">
-      <div class="card org">
-        <img class="avatar" src="siya.jpg" alt="Photo of Siya Qi" width="112" height="112" loading="lazy">
-        <div>
-          <h4><a href="https://siyaqi.github.io/">Siya Qi</a></h4>
-          <div class="aff">Ph.D. Candidate, King’s College London</div>
-          <p>Siya is a Ph.D. candidate in NLP and HCI at King’s College London. Her research focuses on LLM reliability and real-world applications of large language models.</p>
-          <ul class="topics" aria-label="Research topics">
-            <li>LLM hallucination</li><li>LLM agents</li><li>Theory of Mind</li><li>Mechanistic interpretability</li>
-          </ul>
-          <p class="role">Lead organizer: overall program, participant selection, and the post-workshop synthesis.</p>
-        </div>
-      </div>
-      <div class="card org">
-        <img class="avatar" src="yoonseo.jpg" alt="Photo of Yoonseo Choi" width="112" height="112" loading="lazy">
-        <div>
-          <h4><a href="https://yoonseochoi.com/">Yoonseo Choi</a></h4>
-          <div class="aff">Ph.D. Candidate, KAIST</div>
-          <p>Yoonseo is a Ph.D. candidate at KAIST, working with Prof. Juho Kim. She explores how user perspectives can be represented, interpreted, and integrated throughout the lifecycle of AI-mediated systems.</p>
-          <ul class="topics" aria-label="Research topics">
-            <li>Human–AI interaction</li><li>Generative proxies</li><li>Creator ecosystems</li><li>Responsible AI</li>
-          </ul>
-          <p class="role">Technical setup of demos, the shared online gallery, and online materials.</p>
-        </div>
-      </div>
-      <div class="card org">
-        <div class="avatar tba" aria-hidden="true">?</div>
-        <div>
-          <h4>[Organizer 3]</h4>
-          <div class="aff">[Institution]</div>
-          <p class="role">Leads the demo session and the facilitation of group discussions.</p>
-        </div>
-      </div>
-      <div class="card org">
-        <div class="avatar tba" aria-hidden="true">?</div>
-        <div>
-          <h4>[Organizer 4]</h4>
-          <div class="aff">[Institution]</div>
-          <p class="role">Leads the closing discussion and the write-up of the workshop summary.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="block" id="contact">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">08</span><h2>Contact</h2></div>
-    <div class="contact">
-      <h3>Questions?</h3>
-      <p>For questions about submissions, the program, logistics, or access needs, please <a href="mailto:siya.qi@kcl.ac.uk">email the organizers</a>.</p>
-      <p>Workshop participants must register for CHI 2027; see the <a href="https://chi2027.acm.org/authors/workshops/">CHI 2027 workshops page</a> for conference-level details.</p>
+      <p class="mono muted" style="margin:0">Accepted papers and artifacts will be listed here after notifications go out on February 26, 2027.</p>
     </div>
   </div>
 </section>
@@ -611,7 +542,8 @@ sitemap: false
 
 <footer>
   <div class="wrap">
-    <span>AI Otherwise · CHI 2027 Workshop</span>
+    <span>AI Otherwise · ICLR 2027 Workshop</span>
+    <span class="footer-contact">Questions? <a href="mailto:siya.qi@kcl.ac.uk">Email the organizers</a></span>
     <a href="#top">↑ Back to top</a>
   </div>
 </footer>
