@@ -8,11 +8,16 @@ sitemap: false
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Otherwise · ICLR 2027 Workshop</title>
-<meta name="description" content="AI Otherwise: Rethinking What AI Systems Are Assumed to Be. An ICLR 2027 workshop on building, controlling, and evaluating models that depart from assistant defaults.">
+<meta name="description" content="AI Otherwise: Rethinking What AI Systems Are Assumed to Be. An ICLR 2027 workshop on alternative settings: models and systems in which one default has been deliberately removed, inverted, or replaced.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="AI Otherwise · ICLR 2027 Workshop">
-<meta property="og:description" content="What can we learn by building models that forget, wait, misunderstand, disagree, or take on an unfamiliar role?">
-<meta property="og:image" content="hero.jpg">
+<meta property="og:description" content="What happens when a default of contemporary AI is removed instead of improved?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://siyaqi.github.io/workshop_ai_otherwise/">
+<meta property="og:image" content="https://siyaqi.github.io/workshop_ai_otherwise/hero.jpg">
+<meta property="og:image:width" content="1672">
+<meta property="og:image:height" content="941">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -338,7 +343,7 @@ sitemap: false
          alt="AI Otherwise poster: 'Rethinking what AI systems are assumed to be'. A collage of a human head surrounded by pop-up windows reading 'responds slowly', 'misunderstands', 'refuses to optimize', 'forgets' and 'does not always obey'.">
     <p class="kicker">Workshop at ICLR 2027 · California, USA · April 29–30, 2027</p>
     <h1 style="margin-top:12px">AI Otherwise: Rethinking What AI Systems Are Assumed to Be</h1>
-    <p class="sub">What can we learn by building models that forget, wait, misunderstand, disagree, or <span class="mark">take on an unfamiliar role?</span></p>
+    <p class="sub">What happens when a default of contemporary AI is <span class="mark">removed instead of improved?</span></p>
     <div class="facts">
       <div class="fact hot"><div class="k">Submission deadline</div><div class="v">Jan 29, 2027</div><div class="s">23:59 Anywhere on Earth</div></div>
       <div class="fact"><div class="k">Notification</div><div class="v">Feb 26, 2027</div><div class="s">Via OpenReview</div></div>
@@ -359,50 +364,39 @@ sitemap: false
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
 
-    <p class="lede">Contemporary AI assistants share a set of defaults. They respond immediately, follow instructions, remember prior turns, personalize, converge on what the user meant, and agree.</p>
+    <p class="lede">Most current foundation models are built in the same way: next-token pretraining at scale, post-training on human preference, long reasoning before answering, and long context with persistent memory.</p>
 
-    <div class="defaults" aria-label="Defaults of contemporary AI assistants">
-      <span>immediate</span><span>obedient</span><span>remembers</span><span>personalized</span><span>converges on intent</span><span>agrees</span>
+    <div class="defaults" aria-label="Defaults of contemporary AI">
+      <span>scale</span><span>preference post-training</span><span>long reasoning</span><span>long context</span><span>persistent memory</span><span>tool-calling agents</span>
     </div>
 
-    <p>None of these is a property of the pretrained model. Each is installed by the <strong>data protocol</strong>, the <strong>optimization method</strong>, or the <strong>harness</strong> that turns a base model into an assistant. <strong>AI Otherwise</strong> asks what can be learned by building models that deliberately depart from these defaults, and by studying the interactions that result.</p>
+    <p>Each of these choices improves average-case benchmarks, so each has become a <em>default</em>. These defaults work well for typical tasks, but they also limit the kinds of models that researchers consider. <strong>AI Otherwise</strong> studies what happens when a default is <strong>removed instead of improved</strong>.</p>
 
-    <h3>Interactional ablation</h3>
-    <p>We treat each such system as an <em>interactional ablation</em>: it removes or inverts one default, is built by a stated technical route, and is evaluated by what the interaction loses, keeps, or gains. A single ablation answers a local question; a collection tells us which capabilities carry the value of the assistant, and which are conventions inherited from the data protocol.</p>
-
-    <h3>Three open problems</h3>
+    <h3>Alternative settings</h3>
+    <p>We call a model or system in which one default has been deliberately removed, inverted, or replaced an <em>alternative setting</em>. The change can happen in training, architecture, decoding, memory, or the agent harness. The workshop asks three questions:</p>
     <div class="grid-3">
-      <div class="card">
-        <span class="tag">Data</span>
-        <p>No corpus of slow, forgetful, or productively disagreeing interactions exists, and raters recruited under the assistant frame will not prefer such behavior.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Control</span>
-        <p>Aligned models resist being moved off their defaults, and narrow fine-tuning can cause broad side effects. How can one default be removed cleanly?</p>
-      </div>
-      <div class="card">
-        <span class="tag">Evaluation</span>
-        <p>Benchmarks and arenas score single turns. None can score a system whose value unfolds over hours or sessions, or that makes the user do more.</p>
-      </div>
+      <div class="card"><span class="tag">Tasks</span><p>For which tasks is an alternative setting useful?</p></div>
+      <div class="card"><span class="tag">Methods</span><p>How can one default be changed without affecting the rest of the model?</p></div>
+      <div class="card"><span class="tag">Impact</span><p>How should its effects on people, applications, and society be evaluated?</p></div>
     </div>
 
-    <h3 style="margin-top:44px">Seed ablations</h3>
-    <p class="muted">Example systems, each available at the workshop as a running system.</p>
+    <h3 style="margin-top:44px">Example settings</h3>
+    <p class="muted">Starting points for exploration, not a taxonomy. The last column lists hypotheses, not results.</p>
     <div class="probes">
       <div class="probe">
-        <div><span class="lbl">System</span><b>Goldfish AI</b><span class="inv">Remembers only the last few turns (vs. <s>memory</s>)</span></div>
-        <div><span class="lbl">How to remove the default</span>Truncate context to <i>k</i> turns and disable retrieval, or fine-tune on truncated histories.</div>
-        <div><span class="lbl">Question made answerable</span>What is the marginal value of each remembered turn for task success and disclosure?</div>
+        <div><span class="lbl">Setting</span><b>Text-free AI</b><span class="inv">Returns a typed decision instead of text, e.g. <a href="https://en.wikipedia.org/wiki/Jev_(AI_model)">Jev</a> (vs. <s>free-text generation</s>)</span></div>
+        <div><span class="lbl">How it can be built</span>Outputs constrained to a supplied schema of options or score levels, each returned with a probability estimate.</div>
+        <div><span class="lbl">Tasks it may suit</span>High-volume choice, scoring, and yes-or-no decisions consumed by software. Which tasks can be reduced to a typed decision without losing what the text carried?</div>
       </div>
       <div class="probe">
-        <div><span class="lbl">System</span><b>Slow AI</b><span class="inv">Does not reply immediately (vs. <s>immediacy</s>)</span></div>
-        <div><span class="lbl">How to remove the default</span>Delayed delivery, forced deliberation, or asynchronous turn-taking; test-time compute makes the delay useful.</div>
-        <div><span class="lbl">Question made answerable</span>How do latency and deliberation change reliance, verification, and user feedback, and how should time enter the reward?</div>
+        <div><span class="lbl">Setting</span><b>Goldfish AI</b><span class="inv">Keeps only the last few turns (vs. <s>long context &amp; memory</s>)</span></div>
+        <div><span class="lbl">How it can be built</span>Truncated context, memory disabled, or targeted unlearning.</div>
+        <div><span class="lbl">Tasks it may suit</span>Privacy-sensitive and one-off consultations. Which other capabilities degrade once memory is gone?</div>
       </div>
       <div class="probe">
-        <div><span class="lbl">System</span><b>Disobedient AI</b><span class="inv">Refuses to optimize or disagrees (vs. <s>compliance</s>)</span></div>
-        <div><span class="lbl">How to remove the default</span>Activation steering, targeted fine-tuning, or a reward that credits justified disagreement.</div>
-        <div><span class="lbl">Question made answerable</span>Can disagreement be made selective and controllable without broad side effects?</div>
+        <div><span class="lbl">Setting</span><b>Questioning AI</b><span class="inv">Challenges the user’s premise, argument, or decision (vs. <s>accommodating the user</s>)</span></div>
+        <div><span class="lbl">How it can be built</span>Preference data and rewards that favor well-founded challenges; steering against the sycophancy direction.</div>
+        <div><span class="lbl">Tasks it may suit</span>Reviewing research ideas, plans, and decisions. How can a model challenge only when a challenge is warranted?</div>
       </div>
     </div>
   </div>
@@ -412,28 +406,28 @@ sitemap: false
 <section class="block" id="cfp">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">02</span><h2>Call for Papers</h2></div>
-    <p>We invite contributions that <strong>build, control, or evaluate</strong> models departing from an assumed default, from researchers in post-training and alignment, steering and interpretability, evaluation, agent systems, and the study of how people use AI.</p>
+    <p>We invite submissions on <strong>alternative settings</strong>. Submissions do not need to be complete: we welcome ideas for new architectures or new ways of using models, preliminary experiments, short idea papers, demo designs, and user studies. Small observations from everyday use are as welcome as large studies.</p>
 
     <h3>Topics of interest</h3>
-    <div class="grid-2">
-      <div class="card"><span class="tag">Theme A</span><h4>Inverting interactional defaults</h4><p>Models that are deliberately slow, forgetful, inconsistent, non-personalized, uncertain, or non-optimizing, and the training, decoding, or harness changes that produce them.</p></div>
-      <div class="card"><span class="tag">Theme B</span><h4>Breaking role and alignment</h4><p>Models that resist, reinterpret, or disagree; selective disobedience as a control problem; what refusal directions, steering vectors, and emergent misalignment reveal.</p></div>
-      <div class="card"><span class="tag">Theme C</span><h4>Alternative relationships and social roles</h4><p>Models that occupy unfamiliar roles, such as an elderly relative or a child, and personas and biases as controllable instruments.</p></div>
-      <div class="card"><span class="tag">Theme D</span><h4>Data and evaluation for AI otherwise</h4><p>Data for behaviors raters would not prefer, multi-session and longitudinal evaluation, measures of user effort, trust, and learning, and pluralistic feedback.</p></div>
+    <div class="grid-3">
+      <div class="card"><span class="tag">Theme 1</span><h4>Tasks that call for a different model</h4><p>A specific task for which a default model performs poorly or is unsuitable, which default causes the problem, and the setting the task requires. A single well-defined task is sufficient.</p></div>
+      <div class="card"><span class="tag">Theme 2</span><h4>Building alternative settings</h4><p>Removing one mainstream setting in pretraining, architecture, post-training, decoding, memory, or the agent harness; steering and interpretability methods; training data and objectives for specific behaviors.</p></div>
+      <div class="card"><span class="tag">Theme 3</span><h4>Impact of alternative AI</h4><p>How alternative settings affect users, applications, and society: user studies, default-vs-alternative comparisons, multi-session evaluation, negative results, and preventing harmful effects.</p></div>
     </div>
-    <p class="note">Themes are not submission categories; we welcome work that inverts a default not listed here.</p>
+    <p class="note">Themes are not exclusive, and settings not listed above are welcome.</p>
 
     <h3 id="submission">Submission tracks</h3>
     <div class="grid-3 tracks">
-      <div class="card fmt"><span class="tag">Track 1</span><h4>Research papers</h4><span class="pages">Up to 5 pages</span><p>Empirical, theoretical, or methodological work on any of the topics above. Work under review elsewhere is welcome.</p></div>
-      <div class="card fmt"><span class="tag">Track 2</span><h4>Tiny papers</h4><span class="pages">Up to 2 pages</span><p>A single experiment, a negative result, or a well-argued question. AI-generated papers are not permitted.</p></div>
-      <div class="card fmt"><span class="tag">Track 3</span><h4>Artifacts</h4><span class="pages">2 pages + link or video</span><p>A working or partially working alternative system: which default it inverts, how, and what has been observed.</p></div>
+      <div class="card fmt"><span class="tag">Track 1</span><h4>Research papers</h4><span class="pages">Up to 5 pages</span><p>Empirical, theoretical, or methodological work on any of the themes. Work under review elsewhere is welcome.</p></div>
+      <div class="card fmt"><span class="tag">Track 2</span><h4>Tiny papers</h4><span class="pages">Up to 2 pages</span><p>A single experiment, a negative result, a well-argued question, or a single task for which a default was the wrong choice.</p></div>
+      <div class="card fmt"><span class="tag">Track 3</span><h4>Artifacts</h4><span class="pages">2 pages + link or video</span><p>A working or partially working alternative setting that participants can use: the removed default, the method, and observations.</p></div>
     </div>
 
     <dl class="details" style="margin-top:30px">
-      <div><dt>Format</dt><dd>ICLR 2027 LaTeX template; page limits exclude references.</dd></div>
+      <div><dt>Format</dt><dd>ICLR 2027 LaTeX template; page limits exclude references. We prioritize new and ongoing work over work already published at a machine learning venue.</dd></div>
       <div><dt>Review</dt><dd>Papers and tiny papers are reviewed double-blind; artifacts single-blind. Best paper and best artifact awards will be given.</dd></div>
-      <div><dt>Publication</dt><dd>Non-archival. Accepted work is publicly visible on OpenReview. All accepted contributions receive a poster; six are selected for contributed talks.</dd></div>
+      <div><dt>Publication</dt><dd>Non-archival. Accepted work is publicly visible on OpenReview. All accepted contributions receive a poster; six are selected for contributed talks, and artifacts are presented hands-on in the encounter session (authors bring their own devices).</dd></div>
+      <div><dt>LLM policy</dt><dd>We follow the ICLR 2027 LLM policy. Language models may assist but not serve as primary authors or reviewers; AI-generated submissions are not permitted in the tiny-paper track.</dd></div>
       <div><dt>Submit</dt><dd>Via OpenReview (link TBA) by <strong>January 29, 2027</strong>, Anywhere on Earth.</dd></div>
     </dl>
 
@@ -452,12 +446,12 @@ sitemap: false
 <section class="block" id="speakers">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Speakers</h2></div>
-    <p>Four invited talks, each followed by a panel with all invited speakers. Speakers will be announced soon.</p>
+    <p>Four invited talks following the three themes of the call. All invited speakers also serve as panelists. Speakers will be announced soon.</p>
     <div class="grid-2" style="margin-top:22px">
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Post-training &amp; alignment</div></div></div>
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Evaluation &amp; user studies</div></div></div>
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Steering &amp; controllability</div></div></div>
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Agent systems</div></div></div>
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Post-training, steering &amp; the harness</div></div></div>
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Tasks and models outside the standard pipeline</div></div></div>
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Evaluation</div></div></div>
+      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Human–AI interaction &amp; impact</div></div></div>
     </div>
   </div>
 </section>
@@ -469,25 +463,25 @@ sitemap: false
     <p class="note" style="margin-top:0">Tentative. Single day, in person. Times will be adjusted to the ICLR 2027 workshop-day template.</p>
 
     <div class="session">
-      <div class="session-title">Morning · Which defaults carry value?</div>
+      <div class="session-title">Morning · Tasks and alternative settings</div>
       <div class="slot"><div class="t">08:50–09:00</div><div class="a"><b>Opening remarks</b></div></div>
-      <div class="slot"><div class="t">09:00–09:30</div><div class="a"><b>Invited talk 1</b> · post-training and alignment</div></div>
-      <div class="slot"><div class="t">09:30–10:00</div><div class="a"><b>Invited talk 2</b> · evaluation and user studies</div></div>
+      <div class="slot"><div class="t">09:00–09:30</div><div class="a"><b>Invited talk 1</b> · removing a default: post-training, steering, and the harness</div></div>
+      <div class="slot"><div class="t">09:30–10:00</div><div class="a"><b>Invited talk 2</b> · tasks the defaults do not serve, and models built for them</div></div>
       <div class="slot"><div class="t">10:00–10:40</div><div class="a"><b>Contributed talks I</b> · three 12-minute talks</div></div>
       <div class="slot"><div class="t">10:40–11:20</div><div class="a"><b>Coffee break &amp; poster session I</b></div></div>
-      <div class="slot"><div class="t">11:20–12:15</div><div class="a"><b>Encounter session</b> · hands-on with contributed artifacts and seed systems</div></div>
+      <div class="slot"><div class="t">11:20–12:15</div><div class="a"><b>Encounter session</b> · hands-on with contributed artifacts and the example settings</div></div>
     </div>
 
     <div class="break">Lunch · 12:15–13:30</div>
 
     <div class="session">
-      <div class="session-title">Afternoon · Building and evaluating AI otherwise</div>
-      <div class="slot"><div class="t">13:30–14:00</div><div class="a"><b>Invited talk 3</b> · steering and controllability</div></div>
-      <div class="slot"><div class="t">14:00–14:30</div><div class="a"><b>Invited talk 4</b> · agent systems</div></div>
+      <div class="session-title">Afternoon · Evaluation and impact</div>
+      <div class="slot"><div class="t">13:30–14:00</div><div class="a"><b>Invited talk 3</b> · evaluating a model whose value standard benchmarks do not measure</div></div>
+      <div class="slot"><div class="t">14:00–14:30</div><div class="a"><b>Invited talk 4</b> · how people and applications change when a default is removed</div></div>
       <div class="slot"><div class="t">14:30–15:10</div><div class="a"><b>Contributed talks II</b> · three 12-minute talks</div></div>
       <div class="slot"><div class="t">15:10–15:50</div><div class="a"><b>Coffee break &amp; poster session II</b></div></div>
-      <div class="slot"><div class="t">15:50–16:30</div><div class="a"><b>Small-group reflection</b> · what each default proved to be worth</div></div>
-      <div class="slot"><div class="t">16:30–17:15</div><div class="a"><b>Panel</b> · Which defaults carry value, and who decides?</div></div>
+      <div class="slot"><div class="t">15:50–16:30</div><div class="a"><b>Small-group reflection</b> · the task each setting served and what remains open</div></div>
+      <div class="slot"><div class="t">16:30–17:15</div><div class="a"><b>Panel</b> · Which defaults are worth keeping, and for whom?</div></div>
       <div class="slot"><div class="t">17:15–17:30</div><div class="a"><b>Closing remarks &amp; awards</b></div></div>
     </div>
   </div>
@@ -533,7 +527,7 @@ sitemap: false
     <div class="sec-head"><span class="sec-num">06</span><h2>Accepted Papers</h2></div>
     <div class="placeholder">
       <div class="big">Coming soon</div>
-      <p class="mono muted" style="margin:0">Accepted papers and artifacts will be listed here after notifications go out on February 26, 2027.</p>
+      <p class="mono muted" style="margin:0">Accepted papers and artifacts will be listed here after notifications go out on February 26, 2027. Titles of accepted talks will be posted before the conference.</p>
     </div>
   </div>
 </section>
