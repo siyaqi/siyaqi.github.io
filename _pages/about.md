@@ -59,17 +59,13 @@ My research focuses on Natural Language Processing and Large Language Models, pa
 ## Education
 
 - **PhD** in Natural Language Processing, King's College London, 2023-Present
-- **Master's** in Intelligence Science and Technology, Beijing University of Post and Telecommunications (北京邮电大学), 2020-2023
-- **Bachelor's** in Intelligence Science and Technology, Beijing University of Post and Telecommunications (北京邮电大学), 2016-2020
+- **Master & Bachelor** in Intelligence Science and Technology, Beijing University of Post and Telecommunications , 2016-2023
 
 ## Experience
 
-- **Intern**, Microsoft Research Cambridge - Teams lab, 2026
+- **Intern**, Microsoft Research Cambridge - Teams Lab, 2026
 - **Intern**, Vivo - AI Research, 2023
 - **Intern**, Microsoft - Bing - SWE, 2022
-
-## Fun Facts
-I love to create and maintain bullet journals (手帐). It's a creative outlet that helps me organize my thoughts and plans while expressing my artistic side through decorative elements and layouts.
 
 ## Contact
 
