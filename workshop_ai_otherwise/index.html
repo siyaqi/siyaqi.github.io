@@ -238,6 +238,21 @@ sitemap: false
   .details dt { font: 600 13px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .04em; }
   .details dd { margin: 0; font-size: 16px; }
 
+  /* people grid (organizers) */
+  .people { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 22px; }
+  .person { background: var(--card); border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); padding: 14px 14px 16px; text-align: center; }
+  .person .ph {
+    display: grid; place-items: center; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 25%;
+    border: 2px solid var(--ink); background: var(--paper-2); color: var(--muted);
+    font-family: var(--display); font-size: 34px; margin-bottom: 12px;
+  }
+  .person h4 { margin: 0 0 4px; font: 600 17px/1.3 var(--sans); }
+  .person h4 a { text-decoration: none; }
+  .person h4 a:hover { text-decoration: underline; text-decoration-color: var(--orange); }
+  .person .aff { font: 500 12px/1.45 var(--mono); color: var(--muted); margin-bottom: 10px; }
+  .person .area { display: inline-block; font: 600 11.5px/1.2 var(--mono); background: var(--orange); padding: 5px 7px; }
+  @media (max-width: 860px) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
+
   /* placeholder */
   .placeholder {
     border: 2px dashed var(--ink); background: repeating-linear-gradient(135deg, transparent 0 12px, rgba(20,20,20,.04) 12px 24px);
@@ -491,32 +506,36 @@ sitemap: false
 <section class="block" id="organizers">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">05</span><h2>Organizers</h2></div>
-    <div class="grid-2" style="margin-top:22px">
-      <div class="card org">
-        <img class="avatar" src="siya.jpg" alt="Photo of Siya Qi" width="112" height="112" loading="lazy">
-        <div>
-          <h4><a href="https://siyaqi.github.io/">Siya Qi</a></h4>
-          <div class="aff">Ph.D. Candidate, King’s College London</div>
-          <p>Siya is a Ph.D. candidate in natural language processing at King’s College London. Her research focuses on the reliability of large language models and their real-world applications.</p>
-          <ul class="topics" aria-label="Research topics">
-            <li>LLM hallucination</li><li>LLM agents</li><li>Theory of Mind</li><li>Mechanistic interpretability</li>
-          </ul>
-        </div>
+    <div class="people">
+      <div class="person">
+        <img class="ph" src="siya.jpg" alt="Photo of Siya Qi" width="240" height="240" loading="lazy">
+        <h4><a href="https://siyaqi.github.io/">Siya Qi</a></h4>
+        <div class="aff">King’s College London</div>
+        <span class="area">LLM reliability</span>
       </div>
-      <div class="card org">
-        <img class="avatar" src="yoonseo.jpg" alt="Photo of Yoonseo Choi" width="112" height="112" loading="lazy">
-        <div>
-          <h4><a href="https://yoonseochoi.com/">Yoonseo Choi</a></h4>
-          <div class="aff">Ph.D. Candidate, KAIST</div>
-          <p>Yoonseo is a Ph.D. candidate at KAIST, working with Prof. Juho Kim. She studies how user perspectives can be represented, interpreted, and integrated throughout the lifecycle of AI-mediated systems.</p>
-          <ul class="topics" aria-label="Research topics">
-            <li>Human–AI interaction</li><li>Generative proxies</li><li>Creator ecosystems</li><li>Responsible AI</li>
-          </ul>
-        </div>
+      <div class="person">
+        <img class="ph" src="yoonseo.jpg" alt="Photo of Yoonseo Choi" width="240" height="240" loading="lazy">
+        <h4><a href="https://yoonseochoi.com/">Yoonseo Choi</a></h4>
+        <div class="aff">KAIST</div>
+        <span class="area">Human–AI interaction</span>
       </div>
-      <div class="card org"><div class="avatar tba" aria-hidden="true">?</div><div><h4>[Organizer 3]</h4><div class="aff">[Institution]</div></div></div>
-      <div class="card org"><div class="avatar tba" aria-hidden="true">?</div><div><h4>[Organizer 4]</h4><div class="aff">[Institution]</div></div></div>
-      <div class="card org"><div class="avatar tba" aria-hidden="true">?</div><div><h4>[Organizer 5]</h4><div class="aff">[Institution]</div></div></div>
+      <div class="person">
+        <img class="ph" src="lin.jpg" alt="Photo of Lin Gui" width="240" height="240" loading="lazy">
+        <h4><a href="https://sites.google.com/view/lin-gui/about-me">Lin Gui</a></h4>
+        <div class="aff">King’s College London</div>
+        <span class="area">Interpretability</span>
+      </div>
+      <div class="person">
+        <img class="ph" src="zheng.jpg" alt="Photo of Zheng Yuan" width="240" height="240" loading="lazy">
+        <h4><a href="https://www.cl.cam.ac.uk/~zy249/">Zheng Yuan</a></h4>
+        <div class="aff">University of Sheffield</div>
+        <span class="area">NLP applications</span>
+      </div>
+      <div class="person">
+        <div class="ph" aria-hidden="true">?</div>
+        <h4>[Organizer 5]</h4>
+        <div class="aff">[Institution]</div>
+      </div>
     </div>
   </div>
 </section>
