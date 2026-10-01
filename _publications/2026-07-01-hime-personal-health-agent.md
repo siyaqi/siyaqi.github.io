@@ -9,7 +9,7 @@ venue: 'EMNLP 2026 (System Demonstrations)'
 selected: true
 areas: ["Agent"]
 paperurl: 'https://arxiv.org/abs/2607.21019'
-authors: 'W Liu, S Qi, L Zhang, L Tudor Car, Y He'
+authors: 'W Liu *, S Qi *, L Zhang, L Tudor Car, Y He'
 codeurl: 'https://github.com/thinkwee/HiMe'
 citation: 'W Liu, S Qi, L Zhang, L Tudor Car, Y He. (2026). &quot;HiMe: Real-Time Self-Hosted Personal Agent Platform for Health Insights with Wearable Devices.&quot; <i>Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: System Demonstrations (EMNLP 2026 Demo)</i>.'
 ---
