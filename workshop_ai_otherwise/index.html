@@ -254,6 +254,9 @@ sitemap: false
   .person h4 a:hover { text-decoration: underline; text-decoration-color: var(--orange); }
   .person .aff { font: 500 12px/1.45 var(--mono); color: var(--muted); margin-bottom: 10px; }
   .person .area { display: inline-block; font: 600 11.5px/1.2 var(--mono); background: var(--orange); padding: 5px 7px; }
+  .speaker-card { padding: 12px 10px 14px; }
+  .speaker-card .ph { width: 80px; font-size: 26px; margin-bottom: 10px; }
+  .speaker-card h4 { font-size: 15px; margin: 0; }
   @media (max-width: 860px) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
 
   /* placeholder */
@@ -464,12 +467,16 @@ sitemap: false
 <section class="block" id="speakers">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Speakers</h2></div>
-    <p>Four invited talks following the three themes of the call. All invited speakers also serve as panelists. Speakers will be announced soon.</p>
-    <div class="grid-2" style="margin-top:22px">
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Post-training, steering &amp; the harness</div></div></div>
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Task gaps</div></div></div>
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Evaluation</div></div></div>
-      <div class="card org speaker"><div class="avatar tba" aria-hidden="true">?</div><div><h4>To be announced</h4><div class="aff">Human–AI interaction &amp; impact</div></div></div>
+    <p>Invited talks and panels in two sessions: a model-centric morning and a use-centric afternoon. All invited speakers also serve as panelists. Speakers will be announced soon.</p>
+    <div class="people">
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
     </div>
   </div>
 </section>
@@ -484,11 +491,12 @@ sitemap: false
       <div class="session-title">Morning · Model-centric</div>
       <div class="slot"><div class="t">08:50–09:00</div><div class="a"><b>Opening remarks</b> · Organizers</div></div>
       <div class="slot"><div class="t">09:00–10:30</div><div class="a"><b>Talks + Panel</b> · <i>How can we change the model, not only optimize it?</i>
-        <ul class="speakers">
+        <!-- <ul class="speakers">
           <li>Kawin Ethayarajh <span>Assist. Prof., UChicago</span></li>
           <li>Stephanie Milani <span>Incoming Assist. Prof., JHU</span></li>
           <li>Tianmin Shu <span>Assist. Prof., JHU</span></li>
-        </ul></div></div>
+        </ul> -->
+      </div></div>
       <div class="slot"><div class="t">10:30–11:00</div><div class="a"><b>Coffee break</b></div></div>
       <div class="slot"><div class="t">11:00–11:45</div><div class="a"><b>Contributed talks 1–3</b> · drawn from workshop submissions</div></div>
       <div class="slot"><div class="t">11:45–12:30</div><div class="a"><b>Poster and demo session I</b></div></div>
@@ -499,12 +507,13 @@ sitemap: false
     <div class="session">
       <div class="session-title">Afternoon · Use-centric</div>
       <div class="slot"><div class="t">13:30–15:00</div><div class="a"><b>Talks + Panel</b> · <i>How does changing the model change what it is used for?</i>
-        <ul class="speakers">
+        <!-- <ul class="speakers">
           <li>Sherry Tongshuang Wu <span>Assist. Prof., CMU</span></li>
           <li>Kaitlyn Zhou <span>Assist. Prof., Cornell</span></li>
           <li>Tal August <span>Assist. Prof., UIUC</span></li>
-          <li>Juho Kim <span>Assoc. Prof., KAIST</span></li>
-        </ul></div></div>
+          <li>Juho Kim <span>Assoc. Prof., KAIST</span></li> -->
+        <!-- </ul> -->
+      </div></div>
       <div class="slot"><div class="t">15:00–15:45</div><div class="a"><b>Contributed talks 4–6</b> · drawn from workshop submissions</div></div>
       <div class="slot"><div class="t">15:45–16:45</div><div class="a"><b>Coffee break &amp; poster and demo session II</b></div></div>
       <div class="slot"><div class="t">16:45–17:00</div><div class="a"><b>Closing remarks &amp; awards</b> · Organizers</div></div>
