@@ -256,8 +256,10 @@ sitemap: false
   .person .area { display: inline-block; font: 600 11.5px/1.2 var(--mono); background: var(--orange); padding: 5px 7px; }
   .speaker-card { padding: 12px 10px 14px; }
   .speaker-card .ph { width: 80px; font-size: 26px; margin-bottom: 10px; }
-  .speaker-card h4 { font-size: 15px; margin: 0; }
-  @media (max-width: 860px) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
+  .speaker-card h4 { font-size: 15px; margin: 0 0 4px; }
+  .speaker-card .aff { font-size: 11.5px; margin-bottom: 0; }
+  .speakers-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+  @media (max-width: 860px) { .people, .speakers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
 
   /* placeholder */
   .placeholder {
@@ -440,15 +442,15 @@ sitemap: false
     <h3 id="submission">Submission tracks</h3>
     <div class="grid-3 tracks">
       <div class="card fmt"><span class="tag">Track 1</span><h4>Research papers</h4><span class="pages">Up to 5 pages</span><p>Empirical, theoretical, or methodological work on any of the themes. Work under review elsewhere is welcome.</p></div>
-      <div class="card fmt"><span class="tag">Track 2</span><h4>Tiny papers</h4><span class="pages">Up to 2 pages</span><p>A single experiment, a negative result, a well-argued question, or a single task for which a default was the wrong choice.</p></div>
-      <div class="card fmt"><span class="tag">Track 3</span><h4>Artifacts</h4><span class="pages">2 pages + link or video</span><p>A working or partially working alternative setting that participants can use: the removed default, the method, and observations.</p></div>
+      <div class="card fmt"><span class="tag">Track 2</span><h4>Tiny/short papers</h4><span class="pages">Up to 2 pages</span><p>A single experiment, a negative result, a well-argued question, or a single task for which a default was the wrong choice.</p></div>
+      <div class="card fmt"><span class="tag">Track 3</span><h4>Demo track</h4><span class="pages">2 pages + link or video</span><p>A working or partially working alternative setting that participants can use: the removed default, the method, and observations.</p></div>
     </div>
 
     <dl class="details" style="margin-top:30px">
       <div><dt>Format</dt><dd>ICLR 2027 LaTeX template; page limits exclude references. We prioritize new and ongoing work over work already published at a machine learning venue.</dd></div>
-      <div><dt>Review</dt><dd>Papers and tiny papers are reviewed double-blind; artifacts single-blind. Best paper and best artifact awards will be given.</dd></div>
-      <div><dt>Publication</dt><dd>Non-archival. Accepted work is publicly visible on OpenReview. All accepted contributions receive a poster; six are selected for contributed talks, and artifacts are presented hands-on in the encounter session (authors bring their own devices).</dd></div>
-      <div><dt>LLM policy</dt><dd>We follow the ICLR 2027 LLM policy. Language models may assist but not serve as primary authors or reviewers; AI-generated submissions are not permitted in the tiny-paper track.</dd></div>
+      <div><dt>Review</dt><dd>Papers and tiny/short papers are reviewed double-blind; demos single-blind. Best paper and best demo awards will be given.</dd></div>
+      <div><dt>Publication</dt><dd>Non-archival. Accepted work is publicly visible on OpenReview. All accepted contributions receive a poster; six are selected for contributed talks, and demos are presented hands-on in the poster and demo sessions (authors bring their own devices).</dd></div>
+      <div><dt>LLM policy</dt><dd>We follow the ICLR 2027 LLM policy. Language models may assist but not serve as primary authors or reviewers; AI-generated submissions are not permitted in the tiny/short paper track.</dd></div>
       <div><dt>Submit</dt><dd>Via OpenReview (link TBA) by <strong>January 29, 2027</strong>, Anywhere on Earth.</dd></div>
     </dl>
 
@@ -467,16 +469,17 @@ sitemap: false
 <section class="block" id="speakers">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Speakers</h2></div>
-    <p>Invited talks and panels in two sessions: a model-centric morning and a use-centric afternoon. Speakers will be announced soon.</p>
-    <div class="people">
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
-      <div class="person speaker-card"><div class="ph" aria-hidden="true">?</div><h4>To be announced</h4></div>
+    <p>Invited talks and panels in two sessions: a model-centric morning and a use-centric afternoon. All nine invited speakers have confirmed.</p>
+    <div class="people speakers-grid">
+      <div class="person speaker-card"><img class="ph" src="juho.jpg" alt="Photo of Juho Kim" width="240" height="240" loading="lazy"><h4><a href="https://juhokim.com/">Juho Kim</a></h4><div class="aff">KAIST</div></div>
+      <div class="person speaker-card"><img class="ph" src="stephanie.jpg" alt="Photo of Stephanie Milani" width="240" height="240" loading="lazy"><h4><a href="https://stephmilani.github.io">Stephanie Milani</a></h4><div class="aff">Microsoft Research</div></div>
+      <div class="person speaker-card"><img class="ph" src="tianmin.jpg" alt="Photo of Tianmin Shu" width="240" height="240" loading="lazy"><h4><a href="https://www.tshu.io/">Tianmin Shu</a></h4><div class="aff">Johns Hopkins University</div></div>
+      <div class="person speaker-card"><img class="ph" src="qingyu.jpg" alt="Photo of Qingyu Yin" width="240" height="240" loading="lazy"><h4><a href="https://qingyu-yin.github.io/">Qingyu Yin</a></h4><div class="aff">Meta</div></div>
+      <div class="person speaker-card"><img class="ph" src="sara.jpg" alt="Photo of Sara Hooker" width="240" height="240" loading="lazy"><h4><a href="https://www.sarahooker.me/">Sara Hooker</a></h4><div class="aff">Adaption Labs</div></div>
+      <div class="person speaker-card"><img class="ph" src="sherry.jpg" alt="Photo of Sherry Tongshuang Wu" width="240" height="240" loading="lazy"><h4><a href="https://www.cs.cmu.edu/~sherryw/">Sherry Tongshuang Wu</a></h4><div class="aff">Carnegie Mellon University</div></div>
+      <div class="person speaker-card"><img class="ph" src="kaitlyn.jpg" alt="Photo of Kaitlyn Zhou" width="240" height="240" loading="lazy"><h4><a href="https://katezhou.github.io/">Kaitlyn Zhou</a></h4><div class="aff">Cornell University</div></div>
+      <div class="person speaker-card"><img class="ph" src="tal.jpg" alt="Photo of Tal August" width="240" height="240" loading="lazy"><h4><a href="https://talaugust.github.io/">Tal August</a></h4><div class="aff">UIUC</div></div>
+      <div class="person speaker-card"><img class="ph" src="kawin.jpg" alt="Photo of Kawin Ethayarajh" width="240" height="240" loading="lazy"><h4><a href="https://kawine.github.io/">Kawin Ethayarajh</a></h4><div class="aff">University of Chicago</div></div>
     </div>
   </div>
 </section>
@@ -557,8 +560,10 @@ sitemap: false
         <span class="area">XAI</span>
       </div>
       <div class="person">
-        <div class="ph" aria-hidden="true">?</div>
-        <h4>To be announced</h4>
+        <img class="ph" src="hyokun.jpg" alt="Photo of Hyokun Yun" width="240" height="240" loading="lazy">
+        <h4><a href="https://bikestra.github.io/">Hyokun Yun</a></h4>
+        <div class="aff">Meta</div>
+        <span class="area">LLM post-training</span>
       </div>
       <div class="person">
         <div class="ph" aria-hidden="true">?</div>
@@ -578,7 +583,7 @@ sitemap: false
     <div class="sec-head"><span class="sec-num">06</span><h2>Accepted Papers</h2></div>
     <div class="placeholder">
       <div class="big">Coming soon</div>
-      <p class="mono muted" style="margin:0">Accepted papers and artifacts will be listed here after notifications go out on February 26, 2027. Titles of accepted talks will be posted before the conference.</p>
+      <p class="mono muted" style="margin:0">Accepted papers and demos will be listed here after notifications go out on February 26, 2027. Titles of accepted talks will be posted before the conference.</p>
     </div>
   </div>
 </section>
