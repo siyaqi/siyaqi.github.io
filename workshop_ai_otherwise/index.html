@@ -8,10 +8,10 @@ sitemap: false
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Otherwise · ICLR 2027 Workshop</title>
-<meta name="description" content="AI Otherwise: Rethinking What AI Systems Are Assumed to Be. An ICLR 2027 workshop on alternative settings: models and systems in which one default has been deliberately removed, inverted, or replaced.">
+<meta name="description" content="AI Otherwise: Exploring Alternative Paradigms for Artificial Intelligence. An ICLR 2027 workshop on alternative settings: models and systems in which one default of contemporary AI is deliberately changed through training, steering, decoding, or the agent harness.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="AI Otherwise · ICLR 2027 Workshop">
-<meta property="og:description" content="What happens when a default of contemporary AI is changed?">
+<meta property="og:description" content="What can AI systems become when one of their defaults is deliberately changed?">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://siyaqi.github.io/workshop_ai_otherwise/">
 <meta property="og:image" content="https://siyaqi.github.io/workshop_ai_otherwise/hero.jpg">
@@ -369,8 +369,8 @@ sitemap: false
     <img class="hero-img" src="hero.jpg" width="1671" height="941"
          alt="AI Otherwise poster: 'Explore alternative paradigms for artificial intelligence', 'Beyond the defaults.' A collage of a human head surrounded by pop-up windows reading 'act beyond language', 'be questioning', 'optimize or change', 'selective memory' and 'break the pattern'.">
     <p class="kicker">Workshop at ICLR 2027 · California, USA · April 29–30, 2027</p>
-    <h1 style="margin-top:12px">AI Otherwise: Rethinking What AI Systems Are Assumed to Be</h1>
-    <p class="sub">What becomes possible when the <span class="mark">familiar defaults of AI are changed?</span></p>
+    <h1 style="margin-top:12px">AI Otherwise: Exploring Alternative Paradigms for Artificial Intelligence</h1>
+    <p class="sub">What can AI systems become when <span class="mark">one of their defaults is deliberately changed?</span></p>
     <div class="facts">
       <div class="fact hot"><div class="k">Submission deadline</div><div class="v">Jan 29, 2027</div><div class="s">23:59 Anywhere on Earth</div></div>
       <div class="fact"><div class="k">Notification</div><div class="v">Feb 26, 2027</div><div class="s">Via OpenReview</div></div>
@@ -391,39 +391,43 @@ sitemap: false
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
 
-    <p class="lede">Progress in language models has been accompanied by a growing set of shared assumptions about what AI systems should be like: trained at scale, post-trained on human preference, reasoning at length before answering, processing ever longer contexts, and remembering across sessions.</p>
+    <p class="lede">As AI systems have become more capable, a set of design choices has come to be taken for granted. Models are expected to benefit from scale, to become general-purpose assistants through preference optimization, to reason at length, and to retain information across sessions.</p>
 
     <div class="defaults" aria-label="Defaults of contemporary AI">
-      <span>scale</span><span>preference post-training</span><span>long reasoning</span><span>long context</span><span>persistent memory</span>
+      <span>scaling</span><span>preference optimization</span><span>general-purpose assistant</span><span>long reasoning</span><span>persistent memory</span>
     </div>
 
-    <p>We call these the <em>defaults</em> of contemporary AI: choices a new model is expected to adopt unless its developers deliberately decide otherwise, as natural properties of a capable AI system. Yet a different configuration may suit a particular task better, support a different form of human interaction, or reveal something about the capabilities and limitations of current models. <strong>AI Otherwise</strong> asks what becomes possible when familiar defaults are <strong>deliberately changed</strong>.</p>
+    <p>We call these the <em>defaults</em> of contemporary AI systems. As research increasingly optimizes within these defaults, other model configurations remain comparatively underexplored, and there is no dedicated venue for studying and comparing them as design alternatives. <strong>AI Otherwise</strong> treats the defaults themselves as <strong>variables to be changed and compared</strong>.</p>
 
     <h3>Alternative settings</h3>
-    <p>We call a model or system in which one default has been deliberately removed, inverted, or replaced an <em>alternative setting</em>. The change can happen in training, architecture, decoding, memory, or the agent harness. The point is not simply to remove a capability, but to explore what changes when a familiar default is changed. The workshop asks three questions:</p>
-    <div class="grid-3">
-      <div class="card"><span class="tag">Tasks</span><p>For which tasks is an alternative setting useful?</p></div>
-      <div class="card"><span class="tag">Methods</span><p>How can one default be changed without affecting the rest of the model?</p></div>
-      <div class="card"><span class="tag">Impact</span><p>How should its effects on people, applications, and society be evaluated?</p></div>
+    <p>An <em>alternative setting</em> is a model or system in which one default is deliberately changed. <a href="https://en.wikipedia.org/wiki/Jev_(AI_model)">Jev</a>, for example, replaces free-form text generation with structured outputs and probability estimates for downstream software, keeping the language understanding and reasoning enabled by large-scale pretraining while changing how those capabilities are exposed. Such changes may serve tasks poorly handled by current defaults, or expose hidden assumptions and trade-offs in how models are built. The workshop studies alternative settings from two perspectives:</p>
+    <div class="grid-2">
+      <div class="card"><span class="tag">Model-centric</span><p>How can a single default be changed controllably, through pretraining, post-training, steering, decoding, or the agent harness, and how does the change affect the model’s behavior and capabilities?</p></div>
+      <div class="card"><span class="tag">Use-centric</span><p>Which tasks call for a changed default, and how should alternative settings be evaluated when standard benchmarks are built around current defaults?</p></div>
     </div>
 
     <h3 style="margin-top:44px">Example settings</h3>
-    <p class="muted">Starting points for exploration, not a taxonomy. The last column lists hypotheses, not results.</p>
+    <p class="muted">Starting points for exploration, not a taxonomy. Settings not listed here are welcome.</p>
     <div class="probes">
       <div class="probe">
-        <div><span class="lbl">Setting</span><b>Text-free AI</b><span class="inv">Returns a typed decision instead of text, e.g. <a href="https://en.wikipedia.org/wiki/Jev_(AI_model)">Jev</a> (vs. <s>free-text generation</s>)</span></div>
-        <div><span class="lbl">How it can be built</span>Outputs constrained to a supplied schema of options or score levels, each returned with a probability estimate.</div>
-        <div><span class="lbl">Tasks it may suit</span>High-volume choice, scoring, and yes-or-no decisions consumed by software. Which tasks can be reduced to a typed decision without losing what the text carried?</div>
+        <div><span class="lbl">Setting</span><b>Text-free AI</b><span class="inv">Returns a typed decision instead of generated text (vs. <s>text generation</s>)</span></div>
+        <div><span class="lbl">How it can be built</span>Outputs constrained to a supplied schema of options or score levels, each returned with a probability estimate, e.g. <a href="https://en.wikipedia.org/wiki/Jev_(AI_model)">Jev</a>.</div>
+        <div><span class="lbl">Use and open question</span>High-volume choice, scoring, and yes-or-no decisions consumed by software. Which tasks can be reduced to a typed decision without losing what the text carried?</div>
       </div>
       <div class="probe">
-        <div><span class="lbl">Setting</span><b>Goldfish AI</b><span class="inv">Keeps only the last few turns (vs. <s>long context &amp; memory</s>)</span></div>
-        <div><span class="lbl">How it can be built</span>Truncated context, memory disabled, or targeted unlearning.</div>
-        <div><span class="lbl">Tasks it may suit</span>Privacy-sensitive and one-off consultations. Which other capabilities degrade once memory is gone?</div>
+        <div><span class="lbl">Setting</span><b>Goldfish AI</b><span class="inv">Keeps only the last few turns (vs. <s>retaining past interactions</s>)</span></div>
+        <div><span class="lbl">How it can be built</span>Truncated context, cross-session memory disabled, or targeted unlearning.</div>
+        <div><span class="lbl">Use and open question</span>Privacy-sensitive and one-off consultations. Which tasks benefit from deliberately having no persistent memory?</div>
       </div>
       <div class="probe">
         <div><span class="lbl">Setting</span><b>Questioning AI</b><span class="inv">Challenges the user’s premise, argument, or decision (vs. <s>accommodating the user</s>)</span></div>
-        <div><span class="lbl">How it can be built</span>Preference data and rewards that favor well-founded challenges; steering against the sycophancy direction.</div>
-        <div><span class="lbl">Tasks it may suit</span>Reviewing research ideas, plans, and decisions. How can a model challenge only when a challenge is warranted?</div>
+        <div><span class="lbl">How it can be built</span>Preference data and rewards that favor well-founded challenges, or steering against the sycophancy direction.</div>
+        <div><span class="lbl">Use and open question</span>Reviewing research ideas, plans, and decisions, and detecting false premises. How can a model challenge only when a challenge is warranted, and how is that evaluated?</div>
+      </div>
+      <div class="probe">
+        <div><span class="lbl">Setting</span><b>Long-tail AI</b><span class="inv">Answers from the tail of its output distribution (vs. <s>the most probable, most preferred answer</s>)</span></div>
+        <div><span class="lbl">How it can be built</span>Tail sampling, inverted preferences, or rewards against the mode.</div>
+        <div><span class="lbl">Use and open question</span>Brainstorming, hypothesis generation, and creative writing. How can a rare but valuable answer be told apart from a wrong one?</div>
       </div>
     </div>
   </div>
@@ -433,28 +437,28 @@ sitemap: false
 <section class="block" id="cfp">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">02</span><h2>Call for Papers</h2></div>
-    <p>We invite submissions on <strong>alternative settings</strong>. Submissions do not need to be complete: we welcome ideas for new architectures or new ways of using models, preliminary experiments, short idea papers, demo designs, and user studies. Small observations from everyday use are as welcome as large studies.</p>
+    <p>We invite submissions that change one default of contemporary AI and study what the change enables or reveals. Submissions do not need to be complete: ideas for new architectures or new ways of using models, preliminary experiments, and small observations from practical use are as welcome as large studies. Beyond reporting results, submissions should explain <em>why</em> the change has the observed effect, whether or not it improves on the default.</p>
 
     <h3>Topics of interest</h3>
     <div class="grid-3">
-      <div class="card"><span class="tag">Theme 1</span><h4>Tasks that call for a different model</h4><p>A specific task for which a default model performs poorly or is unsuitable, which default causes the problem, and the setting the task requires. A single well-defined task is sufficient.</p></div>
-      <div class="card"><span class="tag">Theme 2</span><h4>Building alternative settings</h4><p>Removing one mainstream setting in pretraining, architecture, post-training, decoding, memory, or the agent harness; steering and interpretability methods; training data and objectives for specific behaviors.</p></div>
-      <div class="card"><span class="tag">Theme 3</span><h4>Impact of alternative AI</h4><p>How alternative settings affect users, applications, and society: user studies, default-vs-alternative comparisons, multi-session evaluation, negative results, and preventing harmful effects.</p></div>
+      <div class="card"><span class="tag">Theme 1</span><h4>Tasks that call for a different model</h4><p>A specific task or application domain where a default model performs poorly or is unsuitable: which default causes the problem, and what setting the task requires. A single well-defined task is sufficient.</p></div>
+      <div class="card"><span class="tag">Theme 2</span><h4>Building alternative settings</h4><p>Changing one default in pretraining, architecture, post-training, decoding, memory, or the agent harness; comparisons of changing the same default at different levels; steering and interpretability methods for removing or adding a default; training data and objectives for specific behaviors.</p></div>
+      <div class="card"><span class="tag">Theme 3</span><h4>Using and evaluating alternative AI</h4><p>Comparisons with default models, new metrics and benchmarks for properties that standard evaluations miss, multi-session and human evaluations, effects on downstream applications, and negative results.</p></div>
     </div>
     <p class="note">Themes are not exclusive, and settings not listed above are welcome.</p>
 
     <h3 id="submission">Submission tracks</h3>
     <div class="grid-3 tracks">
-      <div class="card fmt"><span class="tag">Track 1</span><h4>Research papers</h4><span class="pages">Up to 5 pages</span><p>Empirical, theoretical, or methodological work on any of the themes. Work under review elsewhere is welcome.</p></div>
-      <div class="card fmt"><span class="tag">Track 2</span><h4>Tiny/short papers</h4><span class="pages">Up to 2 pages</span><p>A single experiment, a negative result, a well-argued question, or a single task for which a default was the wrong choice.</p></div>
-      <div class="card fmt"><span class="tag">Track 3</span><h4>Demo track</h4><span class="pages">2 pages + link or video</span><p>A working or partially working alternative setting that participants can use: the removed default, the method, and observations.</p></div>
+      <div class="card fmt"><span class="tag">Track 1</span><h4>Long papers</h4><span class="pages">6–8 pages</span><p>Work that builds, analyzes, or evaluates an alternative setting under any of the themes. Work in progress is welcome if the contribution and its supporting evidence are clearly stated.</p></div>
+      <div class="card fmt"><span class="tag">Track 2</span><h4>Tiny/short papers</h4><span class="pages">2–4 pages</span><p>Following the ICLR tiny and short papers initiative: a single experiment, a negative result with justification, a well-argued question, or a single task for which a default was the wrong choice.</p></div>
+      <div class="card fmt"><span class="tag">Track 3</span><h4>Demo track</h4><span class="pages">2 pages + link or video</span><p>A working or partially working alternative setting, presented live in the poster and demo sessions. Accepted demos form the first entries of an open catalog of alternative settings.</p></div>
     </div>
 
     <dl class="details" style="margin-top:30px">
       <div><dt>Format</dt><dd>ICLR 2027 LaTeX template; page limits exclude references. We prioritize new and ongoing work over work already published at a machine learning venue.</dd></div>
-      <div><dt>Review</dt><dd>Papers and tiny/short papers are reviewed double-blind; demos single-blind. Best paper and best demo awards will be given.</dd></div>
+      <div><dt>Review</dt><dd>Double-blind on OpenReview, with at least two reviews per submission from a program committee spanning post-training, steering and interpretability, agents, and evaluation. Tiny/short papers and demos are reviewed according to their scope. Best paper and best demo awards will be given.</dd></div>
       <div><dt>Publication</dt><dd>Non-archival. Accepted work is publicly visible on OpenReview. All accepted contributions receive a poster; six are selected for contributed talks, and demos are presented hands-on in the poster and demo sessions (authors bring their own devices).</dd></div>
-      <div><dt>LLM policy</dt><dd>We follow the ICLR 2027 LLM policy. Language models may assist but not serve as primary authors or reviewers; AI-generated submissions are not permitted in the tiny/short paper track.</dd></div>
+      <div><dt>LLM policy</dt><dd>We follow the ICLR 2027 LLM policy. LLMs may assist but not serve as primary authors or reviewers, and substantial use should be described. Tiny/short papers must be primarily human-authored. Model outputs reported as experimental results are welcome, provided the prompts and settings needed to reproduce them are stated.</dd></div>
       <div><dt>Submit</dt><dd>Via OpenReview (link TBA) by <strong>January 29, 2027</strong>, Anywhere on Earth.</dd></div>
     </dl>
 
@@ -475,11 +479,11 @@ sitemap: false
     <div class="sec-head"><span class="sec-num">03</span><h2>Speakers</h2></div>
     <p>Invited talks and panels in two sessions: a model-centric morning and a use-centric afternoon. All nine invited speakers have confirmed.</p>
     <div class="people speakers-grid">
-      <div class="person speaker-card"><img class="ph" src="juho.jpg" alt="Photo of Juho Kim" width="240" height="240" loading="lazy"><h4><a href="https://juhokim.com/">Juho Kim</a></h4><div class="aff">KAIST</div></div>
+      <div class="person speaker-card"><img class="ph" src="sara.jpg" alt="Photo of Sara Hooker" width="240" height="240" loading="lazy"><h4><a href="https://www.sarahooker.me/">Sara Hooker</a></h4><div class="aff">Adaption Labs</div></div>
       <div class="person speaker-card"><img class="ph" src="stephanie.jpg" alt="Photo of Stephanie Milani" width="240" height="240" loading="lazy"><h4><a href="https://stephmilani.github.io">Stephanie Milani</a></h4><div class="aff">Microsoft Research</div></div>
       <div class="person speaker-card"><img class="ph" src="tianmin.jpg" alt="Photo of Tianmin Shu" width="240" height="240" loading="lazy"><h4><a href="https://www.tshu.io/">Tianmin Shu</a></h4><div class="aff">Johns Hopkins University</div></div>
       <div class="person speaker-card"><img class="ph" src="qingyu.jpg" alt="Photo of Qingyu Yin" width="240" height="240" loading="lazy"><h4><a href="https://qingyu-yin.github.io/">Qingyu Yin</a></h4><div class="aff">Meta</div></div>
-      <div class="person speaker-card"><img class="ph" src="sara.jpg" alt="Photo of Sara Hooker" width="240" height="240" loading="lazy"><h4><a href="https://www.sarahooker.me/">Sara Hooker</a></h4><div class="aff">Adaption Labs</div></div>
+      <div class="person speaker-card"><img class="ph" src="juho.jpg" alt="Photo of Juho Kim" width="240" height="240" loading="lazy"><h4><a href="https://juhokim.com/">Juho Kim</a></h4><div class="aff">KAIST</div></div>
       <div class="person speaker-card"><img class="ph" src="sherry.jpg" alt="Photo of Sherry Tongshuang Wu" width="240" height="240" loading="lazy"><h4><a href="https://www.cs.cmu.edu/~sherryw/">Sherry Tongshuang Wu</a></h4><div class="aff">Carnegie Mellon University</div></div>
       <div class="person speaker-card"><img class="ph" src="kaitlyn.jpg" alt="Photo of Kaitlyn Zhou" width="240" height="240" loading="lazy"><h4><a href="https://katezhou.github.io/">Kaitlyn Zhou</a></h4><div class="aff">Cornell University</div></div>
       <div class="person speaker-card"><img class="ph" src="tal.jpg" alt="Photo of Tal August" width="240" height="240" loading="lazy"><h4><a href="https://talaugust.github.io/">Tal August</a></h4><div class="aff">UIUC</div></div>
@@ -497,29 +501,31 @@ sitemap: false
     <div class="session">
       <div class="session-title">Morning · Model-centric</div>
       <div class="slot"><div class="t">08:50–09:00</div><div class="a"><b>Opening remarks</b> · Organizers</div></div>
-      <div class="slot"><div class="t">09:00–10:30</div><div class="a"><b>Talks + Panel</b> · <i>How can we change the model, not only optimize it?</i>
+      <div class="slot"><div class="t">09:00–10:45</div><div class="a"><b>Talks + Panel</b> · <i>How can we change the model, not only optimize it?</i>
         <!-- <ul class="speakers">
-          <li>Kawin Ethayarajh <span>Assist. Prof., UChicago</span></li>
-          <li>Stephanie Milani <span>Incoming Assist. Prof., JHU</span></li>
+          <li>Juho Kim <span>Assoc. Prof., KAIST</span></li>
+          <li>Stephanie Milani <span>Microsoft Research</span></li>
           <li>Tianmin Shu <span>Assist. Prof., JHU</span></li>
+          <li>Qingyu Yin <span>Senior Researcher, Meta</span></li>
+          <li>Sara Hooker <span>Co-founder, Adaption Labs</span></li>
         </ul> -->
       </div></div>
-      <div class="slot"><div class="t">10:30–11:00</div><div class="a"><b>Coffee break</b></div></div>
-      <div class="slot"><div class="t">11:00–11:45</div><div class="a"><b>Contributed talks 1–3</b> · drawn from workshop submissions</div></div>
-      <div class="slot"><div class="t">11:45–12:30</div><div class="a"><b>Poster and demo session I</b></div></div>
+      <div class="slot"><div class="t">10:45–11:15</div><div class="a"><b>Coffee break</b></div></div>
+      <div class="slot"><div class="t">11:15–12:00</div><div class="a"><b>Contributed talks 1–3</b> · drawn from workshop submissions</div></div>
+      <div class="slot"><div class="t">12:00–12:30</div><div class="a"><b>Poster and demo session I</b></div></div>
     </div>
 
     <div class="break">Lunch · 12:30–13:30</div>
 
     <div class="session">
       <div class="session-title">Afternoon · Use-centric</div>
-      <div class="slot"><div class="t">13:30–15:00</div><div class="a"><b>Talks + Panel</b> · <i>How does a changed model reshape user interaction?</i>
+      <div class="slot"><div class="t">13:30–15:00</div><div class="a"><b>Talks + Panel</b> · <i>How does changing the model change what it is used for?</i>
         <!-- <ul class="speakers">
           <li>Sherry Tongshuang Wu <span>Assist. Prof., CMU</span></li>
           <li>Kaitlyn Zhou <span>Assist. Prof., Cornell</span></li>
           <li>Tal August <span>Assist. Prof., UIUC</span></li>
-          <li>Juho Kim <span>Assoc. Prof., KAIST</span></li> -->
-        <!-- </ul> -->
+          <li>Kawin Ethayarajh <span>Assist. Prof., UChicago</span></li>
+        </ul> -->
       </div></div>
       <div class="slot"><div class="t">15:00–15:45</div><div class="a"><b>Contributed talks 4–6</b> · drawn from workshop submissions</div></div>
       <div class="slot"><div class="t">15:45–16:45</div><div class="a"><b>Coffee break &amp; poster and demo session II</b></div></div>
