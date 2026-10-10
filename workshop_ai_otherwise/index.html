@@ -15,7 +15,7 @@ sitemap: false
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://siyaqi.github.io/workshop_ai_otherwise/">
 <meta property="og:image" content="https://siyaqi.github.io/workshop_ai_otherwise/hero.jpg">
-<meta property="og:image:width" content="1672">
+<meta property="og:image:width" content="1671">
 <meta property="og:image:height" content="941">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -255,11 +255,15 @@ sitemap: false
   .person .aff { font: 500 12px/1.45 var(--mono); color: var(--muted); margin-bottom: 10px; }
   .person .area { display: inline-block; font: 600 11.5px/1.2 var(--mono); background: var(--orange); padding: 5px 7px; }
   .speaker-card { padding: 12px 10px 14px; }
-  .speaker-card .ph { width: 80px; font-size: 26px; margin-bottom: 10px; }
+  .speaker-card .ph { width: 100px; font-size: 26px; margin-bottom: 10px; }
   .speaker-card h4 { font-size: 15px; margin: 0 0 4px; }
   .speaker-card .aff { font-size: 11.5px; margin-bottom: 0; }
   .speakers-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
-  @media (max-width: 860px) { .people, .speakers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
+  .org-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 40px; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .org-grid .person { padding: 12px 10px 14px; }
+  .org-grid .ph { width: 108px; margin-bottom: 10px; }
+  .org-grid h4 { font-size: 16px; }
+  @media (max-width: 860px) { .people, .speakers-grid, .org-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
 
   /* placeholder */
   .placeholder {
@@ -362,8 +366,8 @@ sitemap: false
 
 <header class="hero" id="top">
   <div class="wrap">
-    <img class="hero-img" src="hero.jpg" width="1672" height="941"
-         alt="AI Otherwise poster: 'Rethinking what AI systems are assumed to be'. A collage of a human head surrounded by pop-up windows reading 'responds slowly', 'misunderstands', 'refuses to optimize', 'forgets' and 'does not always obey'.">
+    <img class="hero-img" src="hero.jpg" width="1671" height="941"
+         alt="AI Otherwise poster: 'Explore alternative paradigms for artificial intelligence', 'Beyond the defaults.' A collage of a human head surrounded by pop-up windows reading 'act beyond language', 'be questioning', 'optimize or change', 'selective memory' and 'break the pattern'.">
     <p class="kicker">Workshop at ICLR 2027 · California, USA · April 29–30, 2027</p>
     <h1 style="margin-top:12px">AI Otherwise: Rethinking What AI Systems Are Assumed to Be</h1>
     <p class="sub">What becomes possible when the <span class="mark">familiar defaults of AI are changed?</span></p>
@@ -528,7 +532,7 @@ sitemap: false
 <section class="block" id="organizers">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">05</span><h2>Organizers</h2></div>
-    <div class="people">
+    <div class="people org-grid">
       <div class="person">
         <img class="ph" src="siya.jpg" alt="Photo of Siya Qi" width="240" height="240" loading="lazy">
         <h4><a href="https://siyaqi.github.io/">Siya Qi</a></h4>
@@ -564,14 +568,6 @@ sitemap: false
         <h4><a href="https://bikestra.github.io/">Hyokun Yun</a></h4>
         <div class="aff">Meta</div>
         <span class="area">LLM post-training</span>
-      </div>
-      <div class="person">
-        <div class="ph" aria-hidden="true">?</div>
-        <h4>To be announced</h4>
-      </div>
-      <div class="person">
-        <div class="ph" aria-hidden="true">?</div>
-        <h4>To be announced</h4>
       </div>
     </div>
   </div>
